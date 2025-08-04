@@ -6,7 +6,7 @@
   <title>Siri Raju Darsinala | AI/ML Engineer & Freelancer</title>
   <link rel="stylesheet" href="style.css" />
   <!-- Stylish Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Playfair+Display:ital,wght@1,600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@1,600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -27,7 +27,7 @@
   <!-- HOME SECTION -->
   <section id="home" class="section visible">
     <div class="hero">
-      <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?fit=crop&w=800&q=80" alt="Software girl working with laptop" class="hero-img">
+      <img src="https://img.freepik.com/free-vector/flat-design-illustration-person-meditating_23-2149222956.jpg?w=740&t=st=1688317012~exp=1688317612~hmac=99bcae7a5ec422a12bdf1f04a441d679399805a5a40b4c0b34920a121e346af4" alt="Minimalist vector of a person relaxing" class="hero-img">
       <h1 class="gradient-name stylish-font">
         Siri Raju Darsinala
       </h1>
@@ -63,7 +63,7 @@
   <!-- SKILLS SECTION -->
   <section id="skills" class="section">
     <h2>My Tech Stack</h2>
-    <div class="skills-enhanced">
+    <div class="skills-horizontal-layout">
       <div class="skill-card"><i class="fa-brands fa-python"></i><span>Python<br><small>AI, Data, Scripting</small></span></div>
       <div class="skill-card"><i class="fa-solid fa-database"></i><span>SQL<br><small>Analytics, Reporting</small></span></div>
       <div class="skill-card"><i class="fa-brands fa-js"></i><span>JavaScript<br><small>Web Apps, Logic</small></span></div>
@@ -79,7 +79,7 @@
   <!-- PROJECTS SECTION -->
   <section id="projects" class="section">
     <h2>Featured Projects</h2>
-    <div class="project-grid-enhanced">
+    <div class="project-horizontal-layout">
       <div class="project-card">
         <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?fit=crop&w=600&q=80" alt="Trading Bot">
         <div>
@@ -107,15 +107,6 @@
           <a href="#" target="_blank">View Demo</a>
         </div>
       </div>
-      <div class="project-card">
-        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?fit=crop&w=600&q=80" alt="Sentiment">
-        <div>
-          <h3>Twitter Sentiment Analyzer</h3>
-          <p>A tool that mines tweets and generates sentiment analysis dashboards to provide business and brand insights.</p>
-          <p><span class="project-tags">NLP, Data Visualization</span></p>
-          <a href="#" target="_blank">View Demo</a>
-        </div>
-      </div>
     </div>
     <div class="down-arrow global-arrow"><i class="fa-solid fa-angles-down"></i></div>
   </section>
@@ -127,19 +118,19 @@
       <div class="card blog-card" onclick="toggleBlog('blog1')">
         <h3>The Future is AI in Software</h3>
         <div class="blog-content" id="blog1">
-          <p>AI is no longer just a buzzword in software development; it's a fundamental tool that enhances every stage of the lifecycle. From AI-powered code completion and automated testing to intelligent bug detection, developers can now build more robust applications faster than ever. For freelancers, this means offering more value to clients by delivering smarter, more efficient solutions. This post explores the practical tools and emerging trends that are shaping the future of software engineering.</p>
+          <p>AI is no longer just a buzzword in software development; it's a fundamental tool that enhances every stage of the lifecycle. This post explores the practical tools and emerging trends that are shaping the future of software engineering.</p>
         </div>
       </div>
       <div class="card blog-card" onclick="toggleBlog('blog2')">
         <h3>Building a Data-Driven Portfolio</h3>
         <div class="blog-content" id="blog2">
-          <p>For aspiring data analysts, a strong portfolio is everything. Instead of just listing skills, showcase projects that solve real problems. Think interactive sales dashboards built with Tableau, machine learning models that predict market trends, or sentiment analysis tools that provide actionable business intelligence. This article breaks down the top projects that will catch a recruiter's eye and demonstrates how to present your findings in a compelling way.</p>
+          <p>For aspiring data analysts, a strong portfolio is everything. This article breaks down the top projects that will catch a recruiter's eye and demonstrates how to present your findings in a compelling way.</p>
         </div>
       </div>
       <div class="card blog-card" onclick="toggleBlog('blog3')">
         <h3>Inside the Build: A Trading Bot</h3>
         <div class="blog-content" id="blog3">
-          <p>Creating an automated trading bot is a masterclass in combining real-time data handling, robust API integration, and sound financial logic. In this deep dive, I share the behind-the-scenes journey of building a bot for the Binance platform. From managing API rate limits and handling market volatility to developing a user-friendly interface for tracking performance, this post covers the technical challenges and business lessons learned along the way.</p>
+          <p>Creating an automated trading bot is a masterclass in combining real-time data handling, robust API integration, and sound financial logic. This post covers the technical challenges and business lessons learned along the way.</p>
         </div>
       </div>
     </div>
@@ -182,36 +173,30 @@
       document.querySelectorAll('.global-arrow').forEach(arrow => {
         arrow.onclick = function () {
           let currentIdx = sections.findIndex(s => s.classList.contains('visible'));
-          let nextIdx = (currentIdx + 1) % sections.length; // Loop back to home from contact
+          let nextIdx = (currentIdx + 1) % sections.length;
           showSection(sections[nextIdx].id);
         };
       });
-      // Hide all blog content initially
       document.querySelectorAll('.blog-content').forEach(el => el.style.display = "none");
     });
 
-    // Blog expand/collapse logic
     function toggleBlog(blogId) {
       const content = document.getElementById(blogId);
       const isVisible = content.style.display === "block";
-      // Hide all other blogs before showing the new one
       document.querySelectorAll('.blog-content').forEach(el => {
         if (el.id !== blogId) {
           el.style.display = "none";
         }
       });
-      // Toggle the clicked blog
       content.style.display = isVisible ? "none" : "block";
     }
 
-    // Form submission message
     function showMessage(e) {
       e.preventDefault();
       const msg = document.getElementById('message');
       msg.innerText = 'Message sent! Thank you for reaching out.';
     }
 
-    // --- Animated Backgrounds ---
     const netCanvas = document.getElementById('networkCanvas');
     const netCtx = netCanvas.getContext('2d');
     let networkImg = new Image();
@@ -233,7 +218,6 @@
       const scaledHeight = networkImg.height * scale;
       const dx = Math.sin(offset * 0.5) * 20 - (scaledWidth - netCanvas.width) / 2;
       const dy = Math.cos(offset * 0.3) * 20 - (scaledHeight - netCanvas.height) / 2;
-
       netCtx.globalAlpha = 0.7;
       netCtx.drawImage(networkImg, dx, dy, scaledWidth, scaledHeight);
       netCtx.globalAlpha = 1.0;
@@ -265,15 +249,12 @@
         line.x += Math.cos(line.angle) * 0.3;
         line.y += Math.sin(line.angle) * 0.3;
         line.angle += (Math.random() - 0.5) * 0.01;
-
         if (line.x < -line.length) line.x = sparkleCanvas.width + line.length;
         if (line.x > sparkleCanvas.width + line.length) line.x = -line.length;
         if (line.y < -line.length) line.y = sparkleCanvas.height + line.length;
         if (line.y > sparkleCanvas.height + line.length) line.y = -line.length;
-
         const x2 = line.x + Math.cos(line.angle) * line.length;
         const y2 = line.y + Math.sin(line.angle) * line.length;
-
         sparkleCtx.save();
         sparkleCtx.beginPath();
         sparkleCtx.moveTo(line.x, line.y);
