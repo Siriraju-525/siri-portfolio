@@ -1,25 +1,39 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: #fdfaf6;
+  background: linear-gradient(135deg, #14253d 0%, #254e70 60%, #ffc700 100%);
   color: #2c2c2c;
   overflow-x: hidden;
   position: relative;
 }
-#sparkleCanvas {
+body::before {
+  content: '';
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.12;
   pointer-events: none;
+  z-index: 0;
+  background: url('https://www.transparenttextures.com/patterns/gold-fish-scale.png');
+  mix-blend-mode: color-dodge;
+}
+#sparkleCanvas {
+  position: fixed;
+  top: 0; left: 0;
+  z-index: 1;
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
 }
 
 .navbar {
   position: sticky;
   top: 0;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(20,37,61,0.98);
   padding: 12px 0;
-  border-bottom: 1px solid #e5d8c0;
+  border-bottom: 2px solid #ffd7007e;
   text-align: center;
   z-index: 1000;
 }
@@ -34,13 +48,14 @@ body {
 .navbar a {
   text-decoration: none;
   font-weight: bold;
-  color: #4b4b4b;
+  color: #ffd700;
   font-size: 1em;
   transition: color 0.3s, transform 0.3s;
 }
 .navbar a:hover {
-  color: #c89e32;
+  color: #fffbe7;
   transform: scale(1.1);
+  text-shadow: 0 2px 12px #ffd70079;
 }
 
 .section {
@@ -55,35 +70,38 @@ body {
 h1 {
   font-family: 'Playfair Display', serif;
   font-size: 3em;
-  color: #1d3557;
+  color: #ffd700;
   margin-top: 20px;
 }
 h2 {
   font-family: 'Playfair Display', serif;
   font-size: 2.2em;
-  color: #3a3a3a;
+  color: #ffe38d;
   margin-bottom: 20px;
   text-align: center;
 }
 
 .hero {
   text-align: center;
-  background: linear-gradient(135deg, #e0f7fa, #fce4ec, #fdf6e3);
+  background: linear-gradient(135deg, #12213f, #204875b2 60%, #ffe38d 100%);
   padding: 80px 20px;
+  border-radius: 22px;
+  box-shadow: 0 6px 50px 8px #12213f33;
 }
 .hero-img {
   width: 200px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 18px;
+  border: 3px solid #ffd700a8;
+  box-shadow: 0 4px 22px #ffd70040;
 }
 .title {
   font-size: 1.4em;
-  color: #555;
+  color: #ffe38d;
   margin: 10px 0;
 }
 .tagline {
   font-size: 1.1em;
-  color: #6c757d;
+  color: #fffbe7cc;
   font-style: italic;
 }
 
@@ -94,21 +112,25 @@ h2 {
   margin-top: 20px;
 }
 .card {
-  background: #fff;
-  border: 1px solid #f0e6d2;
-  border-radius: 10px;
+  background: rgba(30,36,55,0.97);
+  color: #fffbe7;
+  border: 1.5px solid #ffd70060;
+  border-radius: 18px;
   padding: 20px;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s, box-shadow 0.3s, border 0.3s, color 0.3s, background 0.3s;
+  box-shadow: 0 4px 20px 4px #254e7033;
 }
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-  border-color: #c89e32;
+  border-color: #ffd700bb;
+  box-shadow: 0 10px 42px 6px #ffd70044;
+  transform: translateY(-6px) scale(1.033);
+  background: rgba(30,36,55,0.995);
+  color: #ffd700;
 }
 .card a {
   text-decoration: none;
-  color: #c89e32;
+  color: #ffd700;
   font-weight: bold;
 }
 
@@ -118,6 +140,8 @@ h2 {
   border-radius: 12px;
   display: block;
   margin: 20px auto;
+  border: 2px solid #ffd70080;
+  box-shadow: 0 6px 26px #254e7044;
 }
 
 .skills-list {
@@ -129,16 +153,17 @@ h2 {
   padding: 0;
 }
 .skills-list li {
-  background: #f0f0f0;
+  background: #ffe38d25;
   padding: 10px 15px;
   border-radius: 20px;
   font-size: 1em;
-  color: #444;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  transition: background 0.3s;
+  color: #ffe38d;
+  box-shadow: 0 2px 6px #ffd70011;
+  transition: background 0.3s, color 0.3s;
 }
 .skills-list li:hover {
-  background: #fff5e1;
+  background: #ffd70020;
+  color: #14253d;
 }
 
 form {
@@ -150,26 +175,30 @@ form {
 }
 input, textarea {
   padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid #ffd70060;
+  border-radius: 7px;
   font-size: 1em;
+  background: #254e700e;
+  color: #fffbe7;
 }
 button {
-  background: linear-gradient(to right, #c89e32, #b8860b);
-  color: white;
+  background: linear-gradient(to right, #ffd700, #b8860b);
+  color: #254e70;
   padding: 12px;
   border: none;
-  border-radius: 5px;
+  border-radius: 7px;
   font-size: 1em;
+  font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s, color 0.3s;
 }
 button:hover {
-  background: #a88024;
+  background: #eaca44;
+  color: #14253d;
 }
 .message {
   text-align: center;
-  color: green;
+  color: #eaca44;
   margin-top: 15px;
   font-weight: bold;
 }
@@ -181,20 +210,22 @@ button:hover {
 .icons a {
   margin: 0 10px;
   font-size: 1.5em;
-  color: #c89e32;
-  transition: transform 0.3s;
+  color: #ffd700;
+  transition: transform 0.3s, color 0.3s;
 }
 .icons a:hover {
   transform: scale(1.2);
+  color: #ffe38d;
 }
 
 footer {
   text-align: center;
   padding: 20px;
-  background: #fff;
-  border-top: 1px solid #e5d8c0;
-  color: #555;
+  background: #254e70;
+  border-top: 2px solid #ffd7007e;
+  color: #ffe38d;
   margin-top: 40px;
+  border-radius: 10px 10px 0 0;
 }
 
 /* Animations */

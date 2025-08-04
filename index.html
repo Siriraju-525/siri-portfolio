@@ -10,6 +10,11 @@
 </head>
 <body>
   <canvas id="sparkleCanvas"></canvas>
+  <svg width="100vw" height="100vh" style="position:fixed; left:0; top:0; pointer-events:none; z-index:1;">
+    <ellipse cx="92%" cy="11%" rx="48" ry="22" fill="#ffd700" opacity="0.07"/>
+    <ellipse cx="14%" cy="77%" rx="116" ry="44" fill="#ffd700" opacity="0.12"/>
+    <ellipse cx="56%" cy="91%" rx="68" ry="22" fill="#ffe38d" opacity="0.10"/>
+  </svg>
 
   <nav class="navbar">
     <ul>
@@ -24,7 +29,7 @@
 
   <section id="home" class="section visible">
     <div class="hero">
-      <img src="https://i.ibb.co/Z6Kn9XZ/coffee-girl.jpg" alt="Hero Image" class="hero-img">
+      <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=600&q=80" alt="Hero Image" class="hero-img">
       <h1>Siri Raju Darsinala</h1>
       <p class="title">AI/ML Engineer | Data Analyst | Web Developer | Business Developer</p>
       <p class="tagline">Transforming ideas into elegant, intelligent, and impactful solutions.</p>
@@ -35,7 +40,7 @@
     <h2>About Me</h2>
     <p>I’m Siri Raju Darsinala, B.Tech CSE (2025). Passionate about creating elegant tech solutions through AI, data, and design.</p>
     <p><strong>Experience:</strong> Completed AI/ML internship at Microsoft working on multi-animal recognition, and done job simulation at JP Morgan gaining trading platform skills.</p>
-    <img src="https://i.ibb.co/pxS6M94/laptop-girl.jpg" class="about-img" alt="About Image">
+    <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=facearea&w=600&q=80" class="about-img" alt="About Image">
   </section>
 
   <section id="skills" class="section">
@@ -74,7 +79,7 @@
         <a href="https://github.com/Siriraju-525/portfolio-website" target="_blank">View Project</a>
       </div>
     </div>
-    <img src="https://i.ibb.co/3mFHZrq/ai-robot.jpg" class="project-img" alt="Project Image">
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=600&q=80" class="project-img" alt="Project Image">
   </section>
 
   <section id="blog" class="section">
@@ -129,29 +134,76 @@
       msg.innerText = 'Message sent! If any error, please check internet or try again.';
     }
 
-    // Sparkling animation background
+    // Sparkling royal blue + gold canvas lines
     const canvas = document.getElementById('sparkleCanvas');
     const ctx = canvas.getContext('2d');
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    const stars = Array(100).fill().map(() => ({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      size: Math.random() * 2,
-      speed: Math.random() * 0.5
+
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    const stars = Array.from({length:130}, () => ({
+      x: Math.random()*canvas.width,
+      y: Math.random()*canvas.height,
+      size: 1+Math.random()*2.4,
+      speed: 0.39+Math.random()*0.55,
+      angle: Math.random()*2*Math.PI,
     }));
+
+    function drawSparklingLines() {
+      for (let i = 0; i < 10; i++) {
+        ctx.save();
+        const x = Math.random() * canvas.width;
+        const y = Math.random() * canvas.height;
+        const length = 60 + Math.random()*80;
+        const angle = Math.random()*2*Math.PI;
+        const x2 = x + length * Math.cos(angle);
+        const y2 = y + length * Math.sin(angle);
+
+        ctx.beginPath();
+        ctx.moveTo(x, y);
+        ctx.lineTo(x2, y2);
+
+        const grad = ctx.createLinearGradient(x, y, x2, y2);
+        grad.addColorStop(0, "#fffbe7");
+        grad.addColorStop(0.35, "#ffd700");
+        grad.addColorStop(1, "#254e70");
+
+        ctx.strokeStyle = grad;
+        ctx.globalAlpha = 0.11 + Math.random()*0.19;
+        ctx.lineWidth = 2 + Math.random()*2;
+        ctx.shadowBlur = 8;
+        ctx.shadowColor = "#ffd700";
+        ctx.stroke();
+        ctx.restore();
+      }
+    }
+
     function animateStars() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = '#ffd700';
+      drawSparklingLines();
       stars.forEach(star => {
+        ctx.save();
         ctx.beginPath();
-        ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
+        ctx.arc(star.x, star.y, star.size, 0, 2*Math.PI);
+        const gold = ctx.createRadialGradient(star.x, star.y, 0, star.x, star.y, star.size);
+        gold.addColorStop(0, "#fffbe7");
+        gold.addColorStop(0.7, "#ffd700");
+        gold.addColorStop(1, "#14253d");
+        ctx.fillStyle = gold;
+        ctx.shadowBlur = 9;
+        ctx.shadowColor = "#ffd700";
         ctx.fill();
+        ctx.restore();
+
         star.y += star.speed;
-        if (star.y > canvas.height) {
-          star.y = 0;
-          star.x = Math.random() * canvas.width;
-        }
+        star.x += Math.sin(star.angle)*0.52;
+
+        if(star.y > canvas.height) { star.y = 0; star.x = Math.random()*canvas.width; }
+        if(star.x < 0 || star.x > canvas.width) { star.x = Math.random()*canvas.width; }
       });
       requestAnimationFrame(animateStars);
     }
