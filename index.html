@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Siri Raju Portfolio</title>
+  <title>Siri Raju Darsinala | AI/ML Engineer & Freelancer</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Stylish Tech Font for Name -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
   <canvas id="networkCanvas"></canvas>
   <canvas id="sparkleCanvas"></canvas>
-  
+
   <nav class="navbar">
     <ul>
       <li><a href="#" onclick="showSection('home')">Home</a></li>
@@ -22,21 +23,22 @@
       <li><a href="#" onclick="showSection('contact')">Contact</a></li>
     </ul>
   </nav>
-  
+
+  <!-- HOME SECTION -->
   <section id="home" class="section visible">
     <div class="hero">
-      <img src="ai-minimalist-profile.jpg" alt="Tech minimalistic vector" class="hero-img visible-img">
-      <h1 class="gradient-name">
-        <span class="name-glow">Siri Raju Darsinala</span>
+      <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?fit=crop&w=800&q=80" alt="Tech Banner" class="hero-img visible-img">
+      <h1 class="gradient-name name-orbitron">
+        Siri Raju Darsinala
       </h1>
       <div class="animated-badge">
         <i class="fa-solid fa-microchip"></i>
-        AI/ML Engineer &bull; Data Enthusiast
+        AI/ML Engineer &bull; Freelancer &bull; Business Developer
         <i class="fa-solid fa-brain"></i>
       </div>
       <div class="glass-card">
         <p class="tagline">
-          Transforming ideas into <strong>intelligent</strong>, <strong>elegant</strong>, and <strong>impactful</strong> solutions.
+          I build intelligent solutions with <strong>AI, Data & Web</strong>. Actively seeking freelance and job opportunities!
         </p>
         <div class="icons">
           <a href="mailto:siriraju.darsinala001@gmail.com"><i class="fa-solid fa-envelope"></i></a>
@@ -44,84 +46,114 @@
           <a href="https://github.com/Siriraju-525" target="_blank"><i class="fa-brands fa-github"></i></a>
         </div>
       </div>
-      <div class="down-arrow" id="downArrow">
-        <i class="fa-solid fa-angle-double-down"></i>
-      </div>
+      <div class="down-arrow global-arrow"><i class="fa-solid fa-angles-down"></i></div>
     </div>
   </section>
 
+  <!-- ABOUT SECTION -->
   <section id="about" class="section">
     <div class="about-layout">
-      <img src="ai-minimalist-profile.jpg" class="about-img visible-img" alt="About Image">
-      <div class="about-text">
-        <h2>About Me</h2>
-        <p>
-          <span class="about-highlight">Hi, I’m Siri Raju Darsinala, B.Tech CSE (2025).</span>  
-          I am passionate about fusing AI with elegant tech and data solutions.<br>
-          <strong>Experience:</strong> Completed AI/ML internship at Microsoft (multi-animal recognition project), and a simulation at JP Morgan working with advanced trading platforms.<br>
-          I love building <span class="about-highlight">solutions that bridge business needs and modern technology!</span>
-        </p>
-      </div>
+        <div class="about-text">
+            <h2>About Me</h2>
+            <p>I’m Siri Raju Darsinala, a passionate tech enthusiast and recent B.Tech CSE graduate (2025) with a deep interest in AI, automation, and data-driven innovation. My mission is to build elegant, efficient, and scalable solutions that empower businesses and create real-world impact.</p>
+            <h3>Professional Summary</h3>
+            <p>I bring a unique combination of technical expertise and business acumen. During my AI/ML internship at Microsoft, I developed a multi-animal recognition system. At JP Morgan's job simulation, I gained valuable experience in trading platforms and business analytics. I’m actively contributing to open-source projects and freelancing to solve real-world challenges.</p>
+            <h3>Achievements</h3>
+            <p>Successfully deployed AI models for practical use cases, designed user-centric interfaces, and built automation tools that streamline tasks and enhance productivity.</p>
+            <h3>Mission</h3>
+            <p>To leverage technology for positive change, collaborate with innovative teams, and continually learn and grow in the fields of AI, ML, and business development.</p>
+        </div>
     </div>
+    <div class="down-arrow global-arrow"><i class="fa-solid fa-angles-down"></i></div>
   </section>
 
+  <!-- SKILLS SECTION -->
   <section id="skills" class="section">
-    <h2>⚡ My Tech Stack</h2>
-    <ul class="skills-list">
-      <li><i class="fa-brands fa-python"></i> Python</li>
-      <li><i class="fa-solid fa-database"></i> SQL</li>
-      <li><i class="fa-brands fa-js"></i> JavaScript</li>
-      <li><i class="fa-brands fa-html5"></i> HTML</li>
-      <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
-      <li><i class="fa-solid fa-robot"></i> TensorFlow</li>
-      <li><i class="fa-brands fa-git-alt"></i> Git</li>
-      <li><i class="fa-solid fa-chart-line"></i> Business Analysis</li>
-    </ul>
+    <h2>My Tech Stack</h2>
+    <div class="skills-enhanced">
+      <div class="skill-card"><i class="fa-brands fa-python"></i><span>Python<br><small>AI, Data, Scripting</small></span></div>
+      <div class="skill-card"><i class="fa-solid fa-database"></i><span>SQL<br><small>Analytics, Reporting</small></span></div>
+      <div class="skill-card"><i class="fa-brands fa-js"></i><span>JavaScript<br><small>Web Apps, Logic</small></span></div>
+      <div class="skill-card"><i class="fa-brands fa-html5"></i><span>HTML<br><small>Web Structure</small></span></div>
+      <div class="skill-card"><i class="fa-brands fa-css3-alt"></i><span>CSS<br><small>Design, Animations</small></span></div>
+      <div class="skill-card"><i class="fa-solid fa-robot"></i><span>TensorFlow<br><small>Machine Learning</small></span></div>
+      <div class="skill-card"><i class="fa-brands fa-git-alt"></i><span>Git<br><small>Version Control</small></span></div>
+      <div class="skill-card"><i class="fa-solid fa-chart-line"></i><span>Business<br><small>Analysis</small></span></div>
+    </div>
+    <div class="down-arrow global-arrow"><i class="fa-solid fa-angles-down"></i></div>
   </section>
 
+  <!-- PROJECTS SECTION -->
   <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Binance Trading Bot</h3>
-        <p><i class="fa-brands fa-python"></i> Python, Binance API</p>
-        <p>Automated crypto trading bot with real-time data and smart trade logic.</p>
-        <a href="https://github.com/Siriraju-525/binance-futures-trading-bot" target="_blank">View Project</a>
+    <h2>Featured Projects</h2>
+    <div class="project-grid-enhanced">
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?fit=crop&w=600&q=80" alt="Trading Bot">
+        <div>
+          <h3>Binance Trading Bot</h3>
+          <p>An automated crypto trading bot using real-time market data and advanced logic to execute trades.</p>
+          <p><span class="project-tags">Python, Binance API</span></p>
+          <a href="https://github.com/Siriraju-525/binance-futures-trading-bot" target="_blank">View on GitHub</a>
+        </div>
       </div>
-      <div class="card">
-        <h3>Digit Recognition</h3>
-        <p><i class="fa-solid fa-robot"></i> TensorFlow, Keras</p>
-        <p>Built an AI to recognize handwritten digits using CNN model.</p>
-        <a href="https://github.com/Siriraju-525/Handwritten-digit-recognition" target="_blank">View Project</a>
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?fit=crop&w=600&q=80" alt="Digit AI">
+        <div>
+          <h3>Digit Recognition AI</h3>
+          <p>A deep learning model built with a Convolutional Neural Network (CNN) to recognize handwritten digits with high accuracy.</p>
+          <p><span class="project-tags">TensorFlow, Keras</span></p>
+          <a href="https://github.com/Siriraju-525/Handwritten-digit-recognition" target="_blank">View on GitHub</a>
+        </div>
       </div>
-      <div class="card">
-        <h3>Portfolio Website</h3>
-        <p><i class="fa-solid fa-globe"></i> HTML, CSS, JS</p>
-        <p>Animated portfolio with elegant sections and effects.</p>
-        <a href="https://github.com/Siriraju-525/portfolio-website" target="_blank">View Project</a>
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1593720213428-28a5b9e94613?fit=crop&w=600&q=80" alt="Resume AI">
+        <div>
+          <h3>AI Resume Screener</h3>
+          <p>An intelligent system that uses Natural Language Processing (NLP) to screen and rank resumes based on job descriptions.</p>
+          <p><span class="project-tags">Python, Flask, NLP</span></p>
+          <a href="#" target="_blank">View Demo</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?fit=crop&w=600&q=80" alt="Sentiment">
+        <div>
+          <h3>Twitter Sentiment Analyzer</h3>
+          <p>A tool that mines tweets and generates sentiment analysis dashboards to provide business and brand insights.</p>
+          <p><span class="project-tags">NLP, Data Visualization</span></p>
+          <a href="#" target="_blank">View Demo</a>
+        </div>
       </div>
     </div>
-    <img src="download.jpg" class="project-img visible-img" alt="Project Network BG">
+    <div class="down-arrow global-arrow"><i class="fa-solid fa-angles-down"></i></div>
   </section>
 
+  <!-- BLOG SECTION -->
   <section id="blog" class="section">
     <h2>Blog</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>AI in Software</h3>
-        <p>How AI shapes the future of development and tech innovation.</p>
+    <div class="grid blog-list">
+      <div class="card blog-card" onclick="toggleBlog('blog1')">
+        <h3>The Future is AI in Software</h3>
+        <div class="blog-content" id="blog1">
+          <p>AI is no longer just a buzzword in software development; it's a fundamental tool that enhances every stage of the lifecycle. From AI-powered code completion and automated testing to intelligent bug detection, developers can now build more robust applications faster than ever. For freelancers, this means offering more value to clients by delivering smarter, more efficient solutions. This post explores the practical tools and emerging trends that are shaping the future of software engineering.</p>
+        </div>
       </div>
-      <div class="card">
-        <h3>Top Data Projects</h3>
-        <p>Best beginner projects for aspiring data analysts.</p>
+      <div class="card blog-card" onclick="toggleBlog('blog2')">
+        <h3>Building a Data-Driven Portfolio</h3>
+        <div class="blog-content" id="blog2">
+          <p>For aspiring data analysts, a strong portfolio is everything. Instead of just listing skills, showcase projects that solve real problems. Think interactive sales dashboards built with Tableau, machine learning models that predict market trends, or sentiment analysis tools that provide actionable business intelligence. This article breaks down the top projects that will catch a recruiter's eye and demonstrates how to present your findings in a compelling way.</p>
+        </div>
       </div>
-      <div class="card">
-        <h3>Trading Bot Build</h3>
-        <p>Behind the scenes of my Binance Trading Bot creation.</p>
+      <div class="card blog-card" onclick="toggleBlog('blog3')">
+        <h3>Inside the Build: A Trading Bot</h3>
+        <div class="blog-content" id="blog3">
+          <p>Creating an automated trading bot is a masterclass in combining real-time data handling, robust API integration, and sound financial logic. In this deep dive, I share the behind-the-scenes journey of building a bot for the Binance platform. From managing API rate limits and handling market volatility to developing a user-friendly interface for tracking performance, this post covers the technical challenges and business lessons learned along the way.</p>
+        </div>
       </div>
     </div>
+    <div class="down-arrow global-arrow"><i class="fa-solid fa-angles-down"></i></div>
   </section>
 
+  <!-- CONTACT SECTION -->
   <section id="contact" class="section">
     <h2>Contact Me</h2>
     <form onsubmit="showMessage(event)">
@@ -131,108 +163,137 @@
       <button type="submit">Send Message</button>
     </form>
     <div id="message" class="message"></div>
-    <p>Connect:</p>
-    <div class="icons">
+    <div class="icons" style="margin-top:20px;">
       <a href="mailto:siriraju.darsinala001@gmail.com"><i class="fa-solid fa-envelope"></i></a>
       <a href="https://www.linkedin.com/in/siri-raju-darsinala" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
       <a href="https://github.com/Siriraju-525" target="_blank"><i class="fa-brands fa-github"></i></a>
     </div>
+    <div class="down-arrow global-arrow"><i class="fa-solid fa-angles-down"></i></div>
   </section>
 
   <footer>
-    <p>Thank you for visiting. Let's collaborate and build something amazing.</p>
+    <p>Thank you for visiting. <b>Open to freelance and job opportunities!</b> Let's build something amazing together.</p>
     <p>&copy; 2025 Siri Raju Darsinala</p>
   </footer>
 
   <script>
-    // Section navigation
+    // Section navigation and sliding arrow logic
     function showSection(id) {
       document.querySelectorAll('.section').forEach(sec => sec.classList.remove('visible'));
       document.getElementById(id).classList.add('visible');
-      window.scrollTo({top: 0, behavior: 'smooth'});
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // Arrow scrolls to About
-    document.addEventListener('DOMContentLoaded', function() {
-      document.getElementById('downArrow').onclick = function() {
-        showSection('about');
-      };
+    document.addEventListener('DOMContentLoaded', function () {
+      const sections = [...document.querySelectorAll('.section')];
+      document.querySelectorAll('.global-arrow').forEach(arrow => {
+        arrow.onclick = function () {
+          let currentIdx = sections.findIndex(s => s.classList.contains('visible'));
+          let nextIdx = (currentIdx + 1) % sections.length; // Loop back to home from contact
+          showSection(sections[nextIdx].id);
+        };
+      });
+      // Hide all blog content initially
+      document.querySelectorAll('.blog-content').forEach(el => el.style.display = "none");
     });
 
-    // Form message
+    // Blog expand/collapse logic
+    function toggleBlog(blogId) {
+      const content = document.getElementById(blogId);
+      const isVisible = content.style.display === "block";
+      // Hide all other blogs before showing the new one
+      document.querySelectorAll('.blog-content').forEach(el => {
+        if (el.id !== blogId) {
+          el.style.display = "none";
+        }
+      });
+      // Toggle the clicked blog
+      content.style.display = isVisible ? "none" : "block";
+    }
+
+    // Form submission message
     function showMessage(e) {
       e.preventDefault();
       const msg = document.getElementById('message');
-      msg.innerText = 'Message sent! If any error, please check internet or try again.';
+      msg.innerText = 'Message sent! Thank you for reaching out.';
     }
 
-    // Background Animation JS (same as previous version; see previous messages for reference)
-    // Moving glowing network background
+    // --- Animated Backgrounds ---
     const netCanvas = document.getElementById('networkCanvas');
     const netCtx = netCanvas.getContext('2d');
     let networkImg = new Image();
+    // Use the blue network image you provided
     networkImg.src = 'download.jpg';
+
     function resizeNetwork() {
       netCanvas.width = window.innerWidth;
       netCanvas.height = window.innerHeight;
     }
     window.addEventListener('resize', resizeNetwork);
     resizeNetwork();
+
     let offset = 0;
     function animateNetworkBg() {
-      offset += 0.04;
+      offset += 0.03;
       netCtx.clearRect(0, 0, netCanvas.width, netCanvas.height);
-      let sw = Math.max(netCanvas.width, 1080), sh = Math.max(netCanvas.height, 608);
-      let dx = Math.sin(offset/2) * 24;
-      let dy = Math.cos(offset/3) * 24;
-      netCtx.globalAlpha = 0.77;
-      netCtx.drawImage(networkImg, dx, dy, sw, sh, 0, 0, netCanvas.width, netCanvas.height);
+      const scale = 1.1; // Slight zoom for a more dynamic feel
+      const scaledWidth = networkImg.width * scale;
+      const scaledHeight = networkImg.height * scale;
+      const dx = Math.sin(offset * 0.5) * 20 - (scaledWidth - netCanvas.width) / 2;
+      const dy = Math.cos(offset * 0.3) * 20 - (scaledHeight - netCanvas.height) / 2;
+
+      netCtx.globalAlpha = 0.7; // Make the background slightly transparent
+      netCtx.drawImage(networkImg, dx, dy, scaledWidth, scaledHeight);
       netCtx.globalAlpha = 1.0;
       requestAnimationFrame(animateNetworkBg);
     }
     networkImg.onload = animateNetworkBg;
 
-    // Animated gold sparkling lines
     const sparkleCanvas = document.getElementById('sparkleCanvas');
     const sparkleCtx = sparkleCanvas.getContext('2d');
+
     function resizeSparkle() {
       sparkleCanvas.width = window.innerWidth;
       sparkleCanvas.height = window.innerHeight;
     }
     window.addEventListener('resize', resizeSparkle);
     resizeSparkle();
-    const sparkleLines = Array.from({length: 18}, (_,i)=>({
-      x: Math.random()*window.innerWidth,
-      y: Math.random()*window.innerHeight,
-      dx: (Math.random()-0.5)*0.3,
-      dy: (Math.random()-0.5)*0.3,
-      angle: Math.random()*Math.PI*2,
-      length: 80+Math.random()*90,
-      speed: 0.001+Math.random()*0.002,
-      alpha: 0.10+Math.random()*0.22
+
+    const sparkleLines = Array.from({ length: 20 }, () => ({
+      x: Math.random() * sparkleCanvas.width,
+      y: Math.random() * sparkleCanvas.height,
+      angle: Math.random() * Math.PI * 2,
+      length: 70 + Math.random() * 80,
+      alpha: 0.1 + Math.random() * 0.2
     }));
+
     function animateSparkleLines() {
       sparkleCtx.clearRect(0, 0, sparkleCanvas.width, sparkleCanvas.height);
       sparkleLines.forEach(line => {
-        line.x += Math.cos(line.angle)*0.26 + line.dx;
-        line.y += Math.sin(line.angle)*0.26 + line.dy;
-        line.angle += (Math.random()-0.5)*0.005;
-        if(line.x < 0 || line.x > sparkleCanvas.width) line.x = Math.random()*sparkleCanvas.width;
-        if(line.y < 0 || line.y > sparkleCanvas.height) line.y = Math.random()*sparkleCanvas.height;
-        const x2 = line.x + Math.cos(line.angle)*line.length;
-        const y2 = line.y + Math.sin(line.angle)*line.length;
+        line.x += Math.cos(line.angle) * 0.3;
+        line.y += Math.sin(line.angle) * 0.3;
+        line.angle += (Math.random() - 0.5) * 0.01;
+
+        if (line.x < -line.length) line.x = sparkleCanvas.width + line.length;
+        if (line.x > sparkleCanvas.width + line.length) line.x = -line.length;
+        if (line.y < -line.length) line.y = sparkleCanvas.height + line.length;
+        if (line.y > sparkleCanvas.height + line.length) line.y = -line.length;
+
+        const x2 = line.x + Math.cos(line.angle) * line.length;
+        const y2 = line.y + Math.sin(line.angle) * line.length;
+
         sparkleCtx.save();
         sparkleCtx.beginPath();
         sparkleCtx.moveTo(line.x, line.y);
         sparkleCtx.lineTo(x2, y2);
         const grad = sparkleCtx.createLinearGradient(line.x, line.y, x2, y2);
-        grad.addColorStop(0, "#fff2cc");
-        grad.addColorStop(0.45, "#FFD700");
-        grad.addColorStop(1, "#fffbe7");
+        grad.addColorStop(0, "#FFD700");
+        grad.addColorStop(0.5, "#fffbe7");
+        grad.addColorStop(1, "#FFD700");
         sparkleCtx.strokeStyle = grad;
         sparkleCtx.globalAlpha = line.alpha;
-        sparkleCtx.lineWidth = 2.2 + Math.random();
-        sparkleCtx.shadowBlur = 10;
+        sparkleCtx.lineWidth = 1.5 + Math.random();
+        sparkleCtx.shadowBlur = 8;
         sparkleCtx.shadowColor = "#FFD700";
         sparkleCtx.stroke();
         sparkleCtx.restore();
