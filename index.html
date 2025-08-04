@@ -5,10 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Siri Raju Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- Orbitron font for name, Poppins for body -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Playfair+Display:wght@700&family=Poppins&display=swap" rel="stylesheet">
-  <!-- FontAwesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
   <canvas id="networkCanvas"></canvas>
@@ -27,11 +25,8 @@
 
   <section id="home" class="section visible">
     <div class="hero">
-      <!-- Animated Lottie as tech banner (just add a static fallback if Lottie isn't possible) -->
-      <div class="hero-animation">
-        <img src="https://assets7.lottiefiles.com/packages/lf20_KdEJCR.json" alt="Animated Tech Banner" class="hero-img animated-tech-img">
-        <!-- If using Lottie in real deployment, use <lottie-player> or similar. For static site, use a tech SVG/PNG -->
-      </div>
+      <!-- Animated SVG fallback for animated hero art -->
+      <img src="https://assets10.lottiefiles.com/packages/lf20_4kx2q32n.json" alt="Animated Tech Working Girl" class="hero-img visible-img" style="background:#172135;">
       <h1 class="gradient-name name-orbitron">
         Siri Raju Darsinala
       </h1>
@@ -42,7 +37,7 @@
       </div>
       <div class="glass-card">
         <p class="tagline">
-          Data, AI & Web Solutions for Business. Ready for freelance or your next full-time challenge.
+          I help businesses grow with <strong>AI, Data & Web</strong>. Actively seeking freelance and job opportunities!
         </p>
         <div class="icons">
           <a href="mailto:siriraju.darsinala001@gmail.com"><i class="fa-solid fa-envelope"></i></a>
@@ -50,9 +45,7 @@
           <a href="https://github.com/Siriraju-525" target="_blank"><i class="fa-brands fa-github"></i></a>
         </div>
       </div>
-      <div class="down-arrow global-arrow">
-        <i class="fa-solid fa-angle-double-down"></i>
-      </div>
+      <div class="down-arrow global-arrow"><i class="fa-solid fa-angles-down"></i></div>
     </div>
   </section>
 
@@ -62,14 +55,15 @@
       <div class="about-text">
         <h2>About Me</h2>
         <p>
-          <span class="about-highlight">Hi, I’m Siri Raju Darsinala, B.Tech CSE (2025).</span> <br>
-          Passionate about fusing AI with elegant business and data solutions. <br><strong>Experience:</strong> Microsoft AI/ML intern (multi-animal recognition), JP Morgan simulated experience (business analytics + trading platforms). I thrive on blending business sense with deep tech and freelancing in AI, automation, and web.
+          <span class="about-highlight">Hi, I’m Siri Raju Darsinala.</span><br>
+          CSE, Class of 2025.<br>
+          Passionate about AI, automation, analytics, and elegant tech.<br>
+          <strong>Microsoft AI/ML Intern</strong> (multi-animal recognition), <strong>JP Morgan simulation</strong> (business+trading) and multiple freelance projects delivered.<br>
+          I help <span class="about-highlight">businesses & startups</span> use AI to solve real problems and scale.
         </p>
       </div>
-      <div class="down-arrow global-arrow">
-        <i class="fa-solid fa-angle-double-down"></i>
-      </div>
     </div>
+    <div class="down-arrow global-arrow"><i class="fa-solid fa-angles-down"></i></div>
   </section>
 
   <section id="skills" class="section">
@@ -84,48 +78,69 @@
       <div class="skill-card"><i class="fa-brands fa-git-alt"></i><span>Git<br><small>Version Control</small></span></div>
       <div class="skill-card"><i class="fa-solid fa-chart-line"></i><span>Business<br><small>Analysis</small></span></div>
     </div>
-    <div class="down-arrow global-arrow">
-      <i class="fa-solid fa-angle-double-down"></i>
-    </div>
+    <div class="down-arrow global-arrow"><i class="fa-solid fa-angles-down"></i></div>
   </section>
 
   <section id="projects" class="section">
     <h2>Featured Projects</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="https://img.freepik.com/free-vector/trading-graph-concept_23-2149149048.jpg?w=550" class="project-card-img" alt="Trading Bot">
-        <h3>Binance Trading Bot</h3>
-        <p>Python & Binance API powered automation for crypto trading. Smart tech for real-time market moves.</p>
-        <a href="https://github.com/Siriraju-525/binance-futures-trading-bot" target="_blank">View on GitHub</a>
+    <div class="project-grid-enhanced">
+      <div class="project-card">
+        <img src="https://img.freepik.com/free-vector/trading-graph-concept_23-2149149048.jpg?w=550" alt="Trading Bot">
+        <div>
+          <h3>Binance Trading Bot</h3>
+          <p>
+            Real-time crypto automation, profit analytics and risk control logic.<br>
+            <span class="project-tags">Python, Binance API</span>
+          </p>
+          <a href="https://github.com/Siriraju-525/binance-futures-trading-bot" target="_blank">View</a>
+        </div>
       </div>
-      <div class="card">
-        <img src="https://img.freepik.com/free-vector/artificial-intelligence-hand-drawing-concept_52683-29721.jpg?w=700" class="project-card-img" alt="Digit AI">
-        <h3>Digit Recognition</h3>
-        <p>Handwritten digit recognition using CNN/TensorFlow/Keras—quick, accurate, and easily demoed.</p>
-        <a href="https://github.com/Siriraju-525/Handwritten-digit-recognition" target="_blank">View on GitHub</a>
+      <div class="project-card">
+        <img src="https://img.freepik.com/free-vector/artificial-intelligence-hand-drawing-concept_52683-29721.jpg?w=700" alt="Digit AI">
+        <div>
+          <h3>Digit Recognition</h3>
+          <p>
+            Handwritten digit recognition using CNN/TensorFlow/Keras—accurate and fast.<br>
+            <span class="project-tags">TensorFlow, Keras</span>
+          </p>
+          <a href="https://github.com/Siriraju-525/Handwritten-digit-recognition" target="_blank">View</a>
+        </div>
       </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?fit=crop&w=700&q=80" class="project-card-img" alt="Portfolio Website">
-        <h3>Portfolio Website</h3>
-        <p>This elegant portfolio! Multi-sectioned, animated, and smartly organized to impress potential clients and employers.</p>
-        <a href="https://github.com/Siriraju-525/portfolio-website" target="_blank">View on GitHub</a>
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?fit=crop&w=700&q=80" alt="Portfolio">
+        <div>
+          <h3>Portfolio Website</h3>
+          <p>
+            Multi-sectioned, animated, professional portfolio for freelancing & job search.<br>
+            <span class="project-tags">HTML, CSS, JS</span>
+          </p>
+          <a href="https://github.com/Siriraju-525/portfolio-website" target="_blank">View</a>
+        </div>
       </div>
-      <div class="card">
-        <img src="https://img.freepik.com/free-vector/artificial-intelligence-background-design_23-2147887015.jpg?w=800" class="project-card-img" alt="Resume AI">
-        <h3>AI Resume Screener</h3>
-        <p>Python + Flask based AI resumescreener for auto-scanning and shortlisting applicants using NLP.</p>
-        <a href="#" target="_blank">See Demo</a>
+      <div class="project-card">
+        <img src="https://img.freepik.com/free-vector/artificial-intelligence-background-design_23-2147887015.jpg?w=800" alt="Resume AI">
+        <div>
+          <h3>AI Resume Screener</h3>
+          <p>
+            Auto-rank resumes using ML, NLP, Flask <br>
+            <span class="project-tags">Flask, Python</span>
+          </p>
+          <a href="#">Demo</a>
+        </div>
       </div>
-      <div class="card">
-        <img src="https://img.freepik.com/free-vector/gradient-software-development-concept_23-2148809727.jpg?w=826" class="project-card-img" alt="Sentiment">
-        <h3>Twitter Sentiment Analyzer</h3>
-        <p>End-to-end tweet mining and sentiment dashboard for business insights using NLP and Flask.</p>
-        <a href="#" target="_blank">See Demo</a>
+      <div class="project-card">
+        <img src="https://img.freepik.com/free-vector/gradient-software-development-concept_23-2148809727.jpg?w=826" alt="Sentiment">
+        <div>
+          <h3>Twitter Sentiment Analyzer</h3>
+          <p>
+            Mining tweets, generating dashboards for business/brand insights.<br>
+            <span class="project-tags">NLP, Visualization</span>
+          </p>
+          <a href="#">Demo</a>
+        </div>
       </div>
     </div>
-    <div class="down-arrow global-arrow">
-      <i class="fa-solid fa-angle-double-down"></i>
-    </div>
+    <div class="down-arrow global-arrow"><i class="fa-solid fa-angles-down"></i></div>
   </section>
 
   <section id="blog" class="section">
@@ -135,7 +150,8 @@
         <h3>AI in Software</h3>
         <div class="blog-content" id="blog1">
           <p>
-            AI augments software development by automating tests, refactoring legacy code, and driving smart feature design. As a freelancer, learning to leverage AI for DevOps and continuous integration is a big asset. In this post: practical tools, business impact, and future skills everyone should master.
+            AI augments software, automates QA, and drives smart features. As a freelancer, mastering AI can give you an edge in DevOps and integration projects.
+            <br><br><strong>Tips:</strong> Use AI-based code reviewers, try TensorFlow.js for smarter apps, and pitch AI solutions to startups.
           </p>
         </div>
       </div>
@@ -143,7 +159,8 @@
         <h3>Top Data Projects</h3>
         <div class="blog-content" id="blog2">
           <p>
-            Want to build your freelance portfolio? Showcase sales dashboards, visualization (like Tableau/PowerBI), price prediction AI, and interactive data dashboards. Explore my best project tips and how to market your data work to clients.
+            Build your freelance profile: sales dashboards (Tableau/PowerBI), price prediction ML, and SaaS-style analytics tools. Clients love demos that speak to real business needs.
+            <br><br><em>Pro tip:</em> Pair analytics with solid UX!
           </p>
         </div>
       </div>
@@ -151,14 +168,12 @@
         <h3>Trading Bot Build</h3>
         <div class="blog-content" id="blog3">
           <p>
-            Building a trading bot combines business logic, real-time Python APIs, and robust error handling. Here’s my journey: choosing the right API, handling market data, and lessons for any freelancer building for finance clients.
+            A smart trading bot needs robust API handling, real-time logic, and UI beyond code! My journey: technical hurdles, building confidence, and why business context matters—even for developers.
           </p>
         </div>
       </div>
     </div>
-    <div class="down-arrow global-arrow">
-      <i class="fa-solid fa-angle-double-down"></i>
-    </div>
+    <div class="down-arrow global-arrow"><i class="fa-solid fa-angles-down"></i></div>
   </section>
 
   <section id="contact" class="section">
@@ -170,30 +185,27 @@
       <button type="submit">Send Message</button>
     </form>
     <div id="message" class="message"></div>
-    <div class="icons" style="margin-top:20px;">
+    <div class="icons" style="margin-top:18px;">
       <a href="mailto:siriraju.darsinala001@gmail.com"><i class="fa-solid fa-envelope"></i></a>
       <a href="https://www.linkedin.com/in/siri-raju-darsinala" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
       <a href="https://github.com/Siriraju-525" target="_blank"><i class="fa-brands fa-github"></i></a>
     </div>
-    <div class="down-arrow global-arrow">
-      <i class="fa-solid fa-angle-double-down"></i>
-    </div>
+    <div class="down-arrow global-arrow"><i class="fa-solid fa-angles-down"></i></div>
   </section>
 
   <footer>
-    <p>Thank you for visiting. Available for freelance and full-time opportunities! Let’s collaborate.</p>
+    <p>Thank you for visiting. <b>Open to freelance and job opportunities!</b> Let's collaborate.</p>
     <p>&copy; 2025 Siri Raju Darsinala</p>
   </footer>
 
   <script>
-    // Section navigation/show logic
+    // Navigation logic and sliding arrow
     function showSection(id) {
       document.querySelectorAll('.section').forEach(sec => sec.classList.remove('visible'));
       document.getElementById(id).classList.add('visible');
       window.scrollTo({top: 0, behavior: 'smooth'});
     }
-
-    // Arrow scroll logic for every down arrow (global-arrow)
+    // Arrows slide next
     document.addEventListener('DOMContentLoaded', function() {
       const sections = [...document.querySelectorAll('.section')];
       document.querySelectorAll('.global-arrow').forEach(arrow => {
@@ -205,25 +217,20 @@
           window.scrollTo({top: 0, behavior: 'smooth'});
         };
       });
-      // Hide all blog content initially
       document.querySelectorAll('.blog-content').forEach(el => el.style.display = "none");
     });
-
-    // Blog expand/collapse logic
+    // Blog expand/collapse
     function toggleBlog(blogId) {
       let content = document.getElementById(blogId);
       let isVisible = content.style.display === "block";
       document.querySelectorAll('.blog-content').forEach(el => el.style.display = "none");
       content.style.display = isVisible ? "none" : "block";
     }
-
-    // Contact form message
     function showMessage(e) {
       e.preventDefault();
       const msg = document.getElementById('message');
       msg.innerText = 'Message sent! If any error, please check internet or try again.';
     }
-
     // --- Animated Tech Network Background ---
     const netCanvas = document.getElementById('networkCanvas');
     const netCtx = netCanvas.getContext('2d');
@@ -248,8 +255,7 @@
       requestAnimationFrame(animateNetworkBg);
     }
     networkImg.onload = animateNetworkBg;
-
-    // Animated sparkling gold lines
+    // Sparkling lines
     const sparkleCanvas = document.getElementById('sparkleCanvas');
     const sparkleCtx = sparkleCanvas.getContext('2d');
     function resizeSparkle() {
