@@ -9,10 +9,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
+  <canvas id="sparkleCanvas"></canvas>
+
   <nav class="navbar">
     <ul>
       <li><a href="#" onclick="showSection('home')">Home</a></li>
       <li><a href="#" onclick="showSection('about')">About</a></li>
+      <li><a href="#" onclick="showSection('skills')">Skills</a></li>
       <li><a href="#" onclick="showSection('projects')">Projects</a></li>
       <li><a href="#" onclick="showSection('blog')">Blog</a></li>
       <li><a href="#" onclick="showSection('contact')">Contact</a></li>
@@ -23,16 +26,30 @@
     <div class="hero">
       <img src="https://i.ibb.co/Z6Kn9XZ/coffee-girl.jpg" alt="Hero Image" class="hero-img">
       <h1>Siri Raju Darsinala</h1>
-      <p>AI/ML Engineer | Data Analyst | Web Developer | Business Developer</p>
+      <p class="title">AI/ML Engineer | Data Analyst | Web Developer | Business Developer</p>
+      <p class="tagline">Transforming ideas into elegant, intelligent, and impactful solutions.</p>
     </div>
   </section>
 
   <section id="about" class="section">
     <h2>About Me</h2>
-    <p>I’m Siri Raju Darsinala, B.Tech CSE (2025). I create elegant tech solutions with AI, data, and design. Skilled in web dev, AI/ML, and business development.</p>
-    <p><strong>Skills:</strong> Python, SQL, JavaScript, HTML, CSS, TensorFlow, Git, Business Analysis</p>
-    <p><strong>Internship:</strong> AI multi-animal recognition, Binance Trading Bot with real-time data, and UI/UX design.</p>
+    <p>I’m Siri Raju Darsinala, B.Tech CSE (2025). Passionate about creating elegant tech solutions through AI, data, and design.</p>
+    <p><strong>Experience:</strong> Completed AI/ML internship at Microsoft working on multi-animal recognition, and done job simulation at JP Morgan gaining trading platform skills.</p>
     <img src="https://i.ibb.co/pxS6M94/laptop-girl.jpg" class="about-img" alt="About Image">
+  </section>
+
+  <section id="skills" class="section">
+    <h2>⚡ My Tech Stack</h2>
+    <ul class="skills-list">
+      <li><i class="fa-brands fa-python"></i> Python</li>
+      <li><i class="fa-solid fa-database"></i> SQL</li>
+      <li><i class="fa-brands fa-js"></i> JavaScript</li>
+      <li><i class="fa-brands fa-html5"></i> HTML</li>
+      <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
+      <li><i class="fa-solid fa-robot"></i> TensorFlow</li>
+      <li><i class="fa-brands fa-git-alt"></i> Git</li>
+      <li><i class="fa-solid fa-chart-line"></i> Business Analysis</li>
+    </ul>
   </section>
 
   <section id="projects" class="section">
@@ -41,12 +58,20 @@
       <div class="card">
         <h3>Binance Trading Bot</h3>
         <p><i class="fa-brands fa-python"></i> Python, Binance API</p>
-        <a href="https://github.com/Siriraju-525/binance-futures-trading-bot" target="_blank">View</a>
+        <p>Automated crypto trading bot with real-time data and smart trade logic.</p>
+        <a href="https://github.com/Siriraju-525/binance-futures-trading-bot" target="_blank">View Project</a>
       </div>
       <div class="card">
         <h3>Digit Recognition</h3>
-        <p><i class="fa-solid fa-robot"></i> TensorFlow, CNN</p>
-        <a href="https://github.com/Siriraju-525/Handwritten-digit-recognition" target="_blank">View</a>
+        <p><i class="fa-solid fa-robot"></i> TensorFlow, Keras</p>
+        <p>Built an AI to recognize handwritten digits using CNN model.</p>
+        <a href="https://github.com/Siriraju-525/Handwritten-digit-recognition" target="_blank">View Project</a>
+      </div>
+      <div class="card">
+        <h3>Portfolio Website</h3>
+        <p><i class="fa-solid fa-globe"></i> HTML, CSS, JS</p>
+        <p>This luxury animated portfolio with custom sections and visuals.</p>
+        <a href="https://github.com/Siriraju-525/portfolio-website" target="_blank">View Project</a>
       </div>
     </div>
     <img src="https://i.ibb.co/3mFHZrq/ai-robot.jpg" class="project-img" alt="Project Image">
@@ -56,16 +81,16 @@
     <h2>Blog</h2>
     <div class="grid">
       <div class="card">
-        <h3>AI/ML in Software</h3>
-        <p>How AI is reshaping software with automation and insights.</p>
+        <h3>AI in Software</h3>
+        <p>How AI shapes the future of development and tech innovation.</p>
       </div>
       <div class="card">
         <h3>Top Data Projects</h3>
-        <p>Start your data career with these beginner-friendly projects.</p>
+        <p>Best beginner projects for aspiring data analysts.</p>
       </div>
       <div class="card">
-        <h3>My Trading Bot</h3>
-        <p>How I built a real-time crypto bot using Python.</p>
+        <h3>Trading Bot Build</h3>
+        <p>Behind the scenes of my Binance Trading Bot creation.</p>
       </div>
     </div>
   </section>
@@ -97,11 +122,40 @@
       document.querySelectorAll('.section').forEach(sec => sec.classList.remove('visible'));
       document.getElementById(id).classList.add('visible');
     }
+
     function showMessage(e) {
       e.preventDefault();
       const msg = document.getElementById('message');
-      msg.innerText = 'Message sent! If you face issues, check your internet or try again.';
+      msg.innerText = 'Message sent! If any error, please check internet or try again.';
     }
+
+    // Sparkling animation background
+    const canvas = document.getElementById('sparkleCanvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    const stars = Array(100).fill().map(() => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      size: Math.random() * 2,
+      speed: Math.random() * 0.5
+    }));
+    function animateStars() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = '#ffd700';
+      stars.forEach(star => {
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
+        ctx.fill();
+        star.y += star.speed;
+        if (star.y > canvas.height) {
+          star.y = 0;
+          star.x = Math.random() * canvas.width;
+        }
+      });
+      requestAnimationFrame(animateStars);
+    }
+    animateStars();
   </script>
 </body>
 </html>
