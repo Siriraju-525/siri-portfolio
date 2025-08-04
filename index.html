@@ -228,13 +228,13 @@
     function animateNetworkBg() {
       offset += 0.03;
       netCtx.clearRect(0, 0, netCanvas.width, netCanvas.height);
-      const scale = 1.1; // Slight zoom for a more dynamic feel
+      const scale = 1.1;
       const scaledWidth = networkImg.width * scale;
       const scaledHeight = networkImg.height * scale;
       const dx = Math.sin(offset * 0.5) * 20 - (scaledWidth - netCanvas.width) / 2;
       const dy = Math.cos(offset * 0.3) * 20 - (scaledHeight - netCanvas.height) / 2;
 
-      netCtx.globalAlpha = 0.7; // Make the background slightly transparent
+      netCtx.globalAlpha = 0.7;
       netCtx.drawImage(networkImg, dx, dy, scaledWidth, scaledHeight);
       netCtx.globalAlpha = 1.0;
       requestAnimationFrame(animateNetworkBg);
