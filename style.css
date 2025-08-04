@@ -97,10 +97,10 @@ body {
   object-fit: cover;
 }
 
-.gradient-name.stylish-font {
-  font-family: 'Great Vibes', cursive;
-  font-size: 6em;
-  font-weight: 500;
+.gradient-name.name-pacifico {
+  font-family: 'Pacifico', cursive;
+  font-size: 5em;
+  font-weight: 400;
   background: linear-gradient(90deg, #FFD700 20%, #64ffda 70%, #fff 95%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -111,9 +111,9 @@ body {
 }
 
 .tagline {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
   font-style: italic;
-  font-size: 1.6em;
+  font-size: 1.2em;
   color: #a8b2d1;
   margin: 20px 0;
 }
@@ -203,58 +203,31 @@ h2::after {
 
 .skills-horizontal-layout {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  gap: 20px;
-  overflow-x: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
   padding: 20px 0;
 }
 
-/* Custom scrollbar for horizontal layout */
-.skills-horizontal-layout::-webkit-scrollbar {
-  height: 8px;
-}
-.skills-horizontal-layout::-webkit-scrollbar-track {
+.skill-btn {
   background: #112240;
-}
-.skills-horizontal-layout::-webkit-scrollbar-thumb {
-  background-color: #64ffda;
-  border-radius: 10px;
-  border: 2px solid #112240;
-}
-
-
-.skill-card {
-  background: #112240;
-  border-radius: 10px;
-  padding: 25px;
-  text-align: center;
   border: 1px solid #233554;
-  transition: transform 0.3s, box-shadow 0.3s;
-  flex: 0 0 200px; /* Fixed width for horizontal items */
-}
-
-.skill-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
-}
-
-.skill-card i {
-  font-size: 3em;
   color: #64ffda;
-  margin-bottom: 15px;
-}
-
-.skill-card span {
-  display: block;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 1em;
   font-weight: 600;
-  color: #ccd6f6;
-  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-.skill-card small {
-  font-size: 0.9em;
-  color: #a8b2d1;
+.skill-btn:hover {
+  background-color: #172a45;
+  transform: translateY(-3px);
+}
+
+.skill-btn i {
+  margin-right: 10px;
 }
 
 .project-horizontal-layout {
@@ -266,7 +239,6 @@ h2::after {
   padding: 20px 0;
 }
 
-/* Custom scrollbar for horizontal layout */
 .project-horizontal-layout::-webkit-scrollbar {
   height: 8px;
 }
@@ -288,7 +260,7 @@ h2::after {
   flex-direction: column;
   border: 1px solid #233554;
   transition: transform 0.3s, box-shadow 0.3s;
-  flex: 0 0 320px; /* Fixed width for horizontal items */
+  flex: 0 0 320px;
 }
 
 .project-card:hover {
@@ -302,6 +274,12 @@ h2::after {
   object-fit: cover;
   border-radius: 5px;
   margin-bottom: 20px;
+}
+
+.project-card .project-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .project-card h3 {

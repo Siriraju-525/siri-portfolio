@@ -6,7 +6,7 @@
   <title>Siri Raju Darsinala | AI/ML Engineer & Freelancer</title>
   <link rel="stylesheet" href="style.css" />
   <!-- Stylish Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@1,600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -27,8 +27,8 @@
   <!-- HOME SECTION -->
   <section id="home" class="section visible">
     <div class="hero">
-      <img src="https://img.freepik.com/free-vector/flat-design-illustration-person-meditating_23-2149222956.jpg?w=740&t=st=1688317012~exp=1688317612~hmac=99bcae7a5ec422a12bdf1f04a441d679399805a5a40b4c0b34920a121e346af4" alt="Minimalist vector of a person relaxing" class="hero-img">
-      <h1 class="gradient-name stylish-font">
+      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" alt="Person coding on a laptop" class="hero-img">
+      <h1 class="gradient-name name-pacifico">
         Siri Raju Darsinala
       </h1>
       <p class="tagline">
@@ -64,14 +64,14 @@
   <section id="skills" class="section">
     <h2>My Tech Stack</h2>
     <div class="skills-horizontal-layout">
-      <div class="skill-card"><i class="fa-brands fa-python"></i><span>Python<br><small>AI, Data, Scripting</small></span></div>
-      <div class="skill-card"><i class="fa-solid fa-database"></i><span>SQL<br><small>Analytics, Reporting</small></span></div>
-      <div class="skill-card"><i class="fa-brands fa-js"></i><span>JavaScript<br><small>Web Apps, Logic</small></span></div>
-      <div class="skill-card"><i class="fa-brands fa-html5"></i><span>HTML<br><small>Web Structure</small></span></div>
-      <div class="skill-card"><i class="fa-brands fa-css3-alt"></i><span>CSS<br><small>Design, Animations</small></span></div>
-      <div class="skill-card"><i class="fa-solid fa-robot"></i><span>TensorFlow<br><small>Machine Learning</small></span></div>
-      <div class="skill-card"><i class="fa-brands fa-git-alt"></i><span>Git<br><small>Version Control</small></span></div>
-      <div class="skill-card"><i class="fa-solid fa-chart-line"></i><span>Business<br><small>Analysis</small></span></div>
+      <button class="skill-btn"><i class="fa-brands fa-python"></i> Python</button>
+      <button class="skill-btn"><i class="fa-solid fa-database"></i> SQL</button>
+      <button class="skill-btn"><i class="fa-brands fa-js"></i> JavaScript</button>
+      <button class="skill-btn"><i class="fa-brands fa-html5"></i> HTML</button>
+      <button class="skill-btn"><i class="fa-brands fa-css3-alt"></i> CSS</button>
+      <button class="skill-btn"><i class="fa-solid fa-robot"></i> TensorFlow</button>
+      <button class="skill-btn"><i class="fa-brands fa-git-alt"></i> Git</button>
+      <button class="skill-btn"><i class="fa-solid fa-chart-line"></i> Business Analysis</button>
     </div>
     <div class="down-arrow global-arrow"><i class="fa-solid fa-angles-down"></i></div>
   </section>
@@ -82,27 +82,27 @@
     <div class="project-horizontal-layout">
       <div class="project-card">
         <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?fit=crop&w=600&q=80" alt="Trading Bot">
-        <div>
+        <div class="project-info">
           <h3>Binance Trading Bot</h3>
-          <p>An automated crypto trading bot using real-time market data and advanced logic to execute trades.</p>
+          <p>An automated crypto trading bot using real-time market data to execute trades.</p>
           <p><span class="project-tags">Python, Binance API</span></p>
           <a href="https://github.com/Siriraju-525/binance-futures-trading-bot" target="_blank">View on GitHub</a>
         </div>
       </div>
       <div class="project-card">
         <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?fit=crop&w=600&q=80" alt="Digit AI">
-        <div>
+        <div class="project-info">
           <h3>Digit Recognition AI</h3>
-          <p>A deep learning model built with a Convolutional Neural Network (CNN) to recognize handwritten digits with high accuracy.</p>
+          <p>A deep learning model to recognize handwritten digits with high accuracy.</p>
           <p><span class="project-tags">TensorFlow, Keras</span></p>
           <a href="https://github.com/Siriraju-525/Handwritten-digit-recognition" target="_blank">View on GitHub</a>
         </div>
       </div>
       <div class="project-card">
         <img src="https://images.unsplash.com/photo-1593720213428-28a5b9e94613?fit=crop&w=600&q=80" alt="Resume AI">
-        <div>
+        <div class="project-info">
           <h3>AI Resume Screener</h3>
-          <p>An intelligent system that uses Natural Language Processing (NLP) to screen and rank resumes based on job descriptions.</p>
+          <p>An intelligent system that uses NLP to screen and rank resumes automatically.</p>
           <p><span class="project-tags">Python, Flask, NLP</span></p>
           <a href="#" target="_blank">View Demo</a>
         </div>
@@ -118,19 +118,19 @@
       <div class="card blog-card" onclick="toggleBlog('blog1')">
         <h3>The Future is AI in Software</h3>
         <div class="blog-content" id="blog1">
-          <p>AI is no longer just a buzzword in software development; it's a fundamental tool that enhances every stage of the lifecycle. This post explores the practical tools and emerging trends that are shaping the future of software engineering.</p>
+          <p>AI is no longer just a buzzword; it's a fundamental tool enhancing every stage of the software lifecycle. This post explores the practical tools and emerging trends shaping the future of software engineering.</p>
         </div>
       </div>
       <div class="card blog-card" onclick="toggleBlog('blog2')">
         <h3>Building a Data-Driven Portfolio</h3>
         <div class="blog-content" id="blog2">
-          <p>For aspiring data analysts, a strong portfolio is everything. This article breaks down the top projects that will catch a recruiter's eye and demonstrates how to present your findings in a compelling way.</p>
+          <p>For data analysts, a strong portfolio is key. This article breaks down the top projects that will catch a recruiter's eye and demonstrates how to present your findings in a compelling way.</p>
         </div>
       </div>
       <div class="card blog-card" onclick="toggleBlog('blog3')">
         <h3>Inside the Build: A Trading Bot</h3>
         <div class="blog-content" id="blog3">
-          <p>Creating an automated trading bot is a masterclass in combining real-time data handling, robust API integration, and sound financial logic. This post covers the technical challenges and business lessons learned along the way.</p>
+          <p>Creating an automated trading bot is a masterclass in combining real-time data, robust API integration, and sound financial logic. This post covers the technical challenges and business lessons learned.</p>
         </div>
       </div>
     </div>
@@ -161,7 +161,6 @@
   </footer>
 
   <script>
-    // Section navigation and sliding arrow logic
     function showSection(id) {
       document.querySelectorAll('.section').forEach(sec => sec.classList.remove('visible'));
       document.getElementById(id).classList.add('visible');
@@ -184,17 +183,14 @@
       const content = document.getElementById(blogId);
       const isVisible = content.style.display === "block";
       document.querySelectorAll('.blog-content').forEach(el => {
-        if (el.id !== blogId) {
-          el.style.display = "none";
-        }
+        if (el.id !== blogId) el.style.display = "none";
       });
       content.style.display = isVisible ? "none" : "block";
     }
 
     function showMessage(e) {
       e.preventDefault();
-      const msg = document.getElementById('message');
-      msg.innerText = 'Message sent! Thank you for reaching out.';
+      document.getElementById('message').innerText = 'Message sent! Thank you for reaching out.';
     }
 
     const netCanvas = document.getElementById('networkCanvas');
