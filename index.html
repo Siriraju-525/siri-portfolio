@@ -22,10 +22,10 @@
       <li><a href="#" onclick="showSection('contact')">Contact</a></li>
     </ul>
   </nav>
-  
+
   <section id="home" class="section visible">
     <div class="hero">
-      <img src="ai-minimalist-profile.jpg" alt="Tech minimalist vector" class="hero-img visible-img">
+      <img src="https://i.pinimg.com/564x/60/cb/dd/60cbdda7cdec5b1c772cd184a80b7e1e.jpg" alt="Minimalist Girl with Laptop" class="hero-img visible-img">
       <h1 class="gradient-name">
         <span class="name-glow">Siri Raju Darsinala</span>
       </h1>
@@ -44,7 +44,7 @@
           <a href="https://github.com/Siriraju-525" target="_blank"><i class="fa-brands fa-github"></i></a>
         </div>
       </div>
-      <div class="down-arrow" id="downArrow">
+      <div class="down-arrow global-arrow">
         <i class="fa-solid fa-angle-double-down"></i>
       </div>
     </div>
@@ -52,15 +52,18 @@
 
   <section id="about" class="section">
     <div class="about-layout">
-      <img src="ai-minimalist-profile.jpg" class="about-img visible-img" alt="About Image">
+      <img src="https://img.freepik.com/free-vector/ai-technology-artificial-intelligence-background_52683-39941.jpg?w=1060" class="about-img visible-img" alt="AI Tech Illustration">
       <div class="about-text">
         <h2>About Me</h2>
         <p>
-          <span class="about-highlight">Hi, I’m Siri Raju Darsinala, B.Tech CSE (2025).</span>  
-          I am passionate about fusing AI with elegant tech and data solutions.<br>
-          <strong>Experience:</strong> Completed AI/ML internship at Microsoft (multi-animal recognition project), and a simulation at JP Morgan working with advanced trading platforms.<br>
-          I love building <span class="about-highlight">solutions that bridge business needs and modern technology!</span>
+          <span class="about-highlight">Hi, I’m Siri Raju Darsinala, B.Tech CSE (2025).</span><br>
+          Passionate about fusing AI with elegant tech and data solutions.<br>
+          <strong>Experience:</strong> AI/ML internship at Microsoft (multi-animal recognition); job simulation at JP Morgan (trading platforms).<br>
+          I love building <span class="about-highlight">solutions bridging business needs and technology!</span>
         </p>
+      </div>
+      <div class="down-arrow global-arrow">
+        <i class="fa-solid fa-angle-double-down"></i>
       </div>
     </div>
   </section>
@@ -77,6 +80,9 @@
       <li><i class="fa-brands fa-git-alt"></i> Git</li>
       <li><i class="fa-solid fa-chart-line"></i> Business Analysis</li>
     </ul>
+    <div class="down-arrow global-arrow">
+      <i class="fa-solid fa-angle-double-down"></i>
+    </div>
   </section>
 
   <section id="projects" class="section">
@@ -85,40 +91,62 @@
       <div class="card">
         <h3>Binance Trading Bot</h3>
         <p><i class="fa-brands fa-python"></i> Python, Binance API</p>
-        <p>Automated crypto trading bot with real-time data and smart trade logic.</p>
+        <p>Automated crypto trading bot with real-time market data and advanced logic.</p>
         <a href="https://github.com/Siriraju-525/binance-futures-trading-bot" target="_blank">View Project</a>
       </div>
       <div class="card">
         <h3>Digit Recognition</h3>
         <p><i class="fa-solid fa-robot"></i> TensorFlow, Keras</p>
-        <p>Built an AI to recognize handwritten digits using CNN model.</p>
+        <p>Handwritten digit recognition AI using deep learning CNN techniques.</p>
         <a href="https://github.com/Siriraju-525/Handwritten-digit-recognition" target="_blank">View Project</a>
       </div>
       <div class="card">
         <h3>Portfolio Website</h3>
         <p><i class="fa-solid fa-globe"></i> HTML, CSS, JS</p>
-        <p>Animated portfolio with elegant sections and effects.</p>
+        <p>Animated, multi-sectioned, rich-feature portfolio website.</p>
         <a href="https://github.com/Siriraju-525/portfolio-website" target="_blank">View Project</a>
       </div>
+      <div class="card">
+        <h3>Twitter Sentiment Analyzer</h3>
+        <p><i class="fa-solid fa-code"></i> Python, NLP</p>
+        <p>Analyzed tweets for sentiment using AI and presented data visualizations.</p>
+      </div>
+      <div class="card">
+        <h3>AI Resume Screener</h3>
+        <p><i class="fa-solid fa-user-tie"></i> Python, Flask</p>
+        <p>Automated system for screening resumes with NLP & ML pipeline.</p>
+      </div>
     </div>
-    <img src="download.jpg" class="project-img visible-img" alt="Project Network BG">
+    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?fit=crop&w=800&q=80" class="project-img visible-img" alt="Tech Project Image">
+    <div class="down-arrow global-arrow">
+      <i class="fa-solid fa-angle-double-down"></i>
+    </div>
   </section>
 
   <section id="blog" class="section">
     <h2>Blog</h2>
-    <div class="grid">
-      <div class="card">
+    <div class="grid blog-list">
+      <div class="card blog-card" onclick="toggleBlog('blog1')">
         <h3>AI in Software</h3>
-        <p>How AI shapes the future of development and tech innovation.</p>
+        <div class="blog-content" id="blog1">
+          <p>AI is transforming software development: smarter automation, feature-rich tools, and rapid prototyping. We discuss the future landscape and key trends for tech professionals.</p>
+        </div>
       </div>
-      <div class="card">
+      <div class="card blog-card" onclick="toggleBlog('blog2')">
         <h3>Top Data Projects</h3>
-        <p>Best beginner projects for aspiring data analysts.</p>
+        <div class="blog-content" id="blog2">
+          <p>Start your data career with these projects: movie revenue predictors, sentiment analysis, and interactive dashboards. Real-world learning for aspiring analysts!</p>
+        </div>
       </div>
-      <div class="card">
+      <div class="card blog-card" onclick="toggleBlog('blog3')">
         <h3>Trading Bot Build</h3>
-        <p>Behind the scenes of my Binance Trading Bot creation.</p>
+        <div class="blog-content" id="blog3">
+          <p>Go behind the scenes of building a Binance trading bot: AI models, API tricks, and real market challenges revealed step by step.</p>
+        </div>
       </div>
+    </div>
+    <div class="down-arrow global-arrow">
+      <i class="fa-solid fa-angle-double-down"></i>
     </div>
   </section>
 
@@ -137,6 +165,9 @@
       <a href="https://www.linkedin.com/in/siri-raju-darsinala" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
       <a href="https://github.com/Siriraju-525" target="_blank"><i class="fa-brands fa-github"></i></a>
     </div>
+    <div class="down-arrow global-arrow">
+      <i class="fa-solid fa-angle-double-down"></i>
+    </div>
   </section>
 
   <footer>
@@ -145,19 +176,35 @@
   </footer>
 
   <script>
-    // Section navigation/show logic
+    // Navigation Logic and Section Switch
     function showSection(id) {
       document.querySelectorAll('.section').forEach(sec => sec.classList.remove('visible'));
       document.getElementById(id).classList.add('visible');
       window.scrollTo({top: 0, behavior: 'smooth'});
     }
 
-    // Down arrow scrolls to About
+    // Down arrow scrolls to next section
     document.addEventListener('DOMContentLoaded', function() {
-      document.getElementById('downArrow').onclick = function() {
-        showSection('about');
-      };
+      const sections = [...document.querySelectorAll('.section')];
+      document.querySelectorAll('.global-arrow').forEach((arrow, idx) => {
+        arrow.onclick = function() {
+          let nextIdx = (sections.findIndex(s => s.classList.contains('visible')) + 1) % sections.length;
+          sections.forEach(sec => sec.classList.remove('visible'));
+          sections[nextIdx].classList.add('visible');
+          window.scrollTo({top: 0, behavior: 'smooth'});
+        };
+      });
+      // Hide all blog content initially
+      document.querySelectorAll('.blog-content').forEach(el => el.style.display = "none");
     });
+
+    // Toggle blog cards
+    function toggleBlog(blogId) {
+      let content = document.getElementById(blogId);
+      let isVisible = content.style.display === "block";
+      document.querySelectorAll('.blog-content').forEach(el => el.style.display = "none");
+      content.style.display = isVisible ? "none" : "block";
+    }
 
     // Form message
     function showMessage(e) {
@@ -167,11 +214,10 @@
     }
 
     // --- Background Animation ---
-    // Network image movement
     const netCanvas = document.getElementById('networkCanvas');
     const netCtx = netCanvas.getContext('2d');
     let networkImg = new Image();
-    networkImg.src = 'download.jpg';
+    networkImg.src = 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?fit=crop&w=900&q=80';
     function resizeNetwork() {
       netCanvas.width = window.innerWidth;
       netCanvas.height = window.innerHeight;
