@@ -51,7 +51,6 @@ body {
 }
 .section.visible { display: block; }
 
-/* Enhanced Name & Effects */
 .gradient-name {
   font-family: 'Playfair Display', serif;
   font-size: 3.5em;
@@ -64,10 +63,7 @@ body {
   -webkit-text-fill-color: transparent;
   position: relative;
   margin-top: 20px;
-  text-shadow:
-    0 0 12px #25cff288,
-    0 2px 6px #FFD70060,
-    0 1px 0 #14253d;
+  text-shadow: 0 0 12px #25cff288, 0 2px 6px #FFD70060, 0 1px 0 #14253d;
   z-index: 2;
 }
 .name-glow {
@@ -80,7 +76,6 @@ body {
   to { text-shadow: 0 0 36px #FFD700ee, 0 0 14px #25cff2bb; }
 }
 
-/* Animated badge */
 .animated-badge {
   display: inline-block;
   margin: 12px auto 24px auto;
@@ -105,7 +100,22 @@ body {
   filter: drop-shadow(0 0 8px #FFD70044);
 }
 
-/* Glassmorphism Tagline Card */
+.hero {
+  text-align: center;
+  background: rgba(21,34,48,0.83);
+  padding: 80px 20px;
+  border-radius: 20px;
+  box-shadow: 0 6px 40px 9px #03183638;
+  margin-top: 38px;
+}
+.hero-img {
+  width: 200px;
+  border-radius: 18px;
+  border: 4px solid #23a2d1;
+  box-shadow: 0 4px 22px #23a2d179;
+  margin-bottom: 18px;
+}
+.visible-img { display: block; }
 .glass-card {
   display: inline-block;
   margin-top: 20px;
@@ -141,11 +151,10 @@ body {
   transform: scale(1.2);
   color: #FFD700;
 }
-
-/* Down arrow */
 .down-arrow {
   text-align: center;
   margin-top: 32px;
+  cursor: pointer;
 }
 .down-arrow i {
   font-size: 2.2em;
@@ -159,22 +168,138 @@ body {
   100% { transform: translateY(0);}
 }
 
-.hero {
-  text-align: center;
-  background: rgba(21,34,48,0.83);
-  padding: 80px 20px;
-  border-radius: 20px;
-  box-shadow: 0 6px 40px 9px #03183638;
-  margin-top: 38px;
+/* About Section Enhancement */
+.about-layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background: rgba(24,36,52,0.85);
+  border-radius: 24px;
+  padding: 32px 20px 32px 20px;
+  box-shadow: 0 4px 48px #25cff220, 0 -2px 12px #FFD70040;
+  gap: 30px;
 }
-.hero-img {
-  width: 200px;
-  border-radius: 18px;
-  border: 4px solid #23a2d1;
-  box-shadow: 0 4px 22px #23a2d179;
+.about-img {
+  width: 220px;
+  max-width: 100%;
+  border-radius: 16px;
+  border: 2.5px solid #FFD70077;
+  box-shadow: 0 6px 32px #FFD70013;
+  background: #263448;
+}
+.about-text {
+  max-width: 590px;
+  color: #e9f3ff;
+  font-size: 1.19em;
+  line-height: 1.65;
+  padding: 6px 12px;
+}
+.about-highlight {
+  color: #FFD700;
+  font-weight: 700;
+  font-style: italic;
 }
 
-/* Animations */
+/* Cards and project image */
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 20px;
+}
+.card {
+  background: rgba(19,32,49,0.91);
+  border: 1.5px solid #23a2d179;
+  border-radius: 17px;
+  color: #a8eaf8;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px #04417444;
+  transition: transform 0.3s, box-shadow 0.3s, border 0.3s, color 0.3s, background 0.3s;
+}
+.card:hover {
+  border-color: #FFD700;
+  box-shadow: 0 10px 42px 6px #FFD70044;
+  transform: translateY(-6px) scale(1.033);
+  background: #14253d;
+  color: #FFD700;
+}
+.project-img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  display: block;
+  margin: 24px auto 0 auto;
+  border: 3px solid #23a2d1;
+  box-shadow: 0 6px 26px #25cff288;
+}
+
+/* Skills List */
+h2 { font-family: 'Playfair Display', serif; font-size: 2.2em; color: #FFD700; margin-bottom: 20px; text-align: center;}
+.skills-list {
+  display: flex; flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+}
+.skills-list li {
+  background: #1f4e69c9;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 1em;
+  color: #25cff2;
+  box-shadow: 0 2px 6px #25cff224;
+  border: 1px solid #12e8f7;
+  transition: background 0.3s, color 0.3s;
+}
+.skills-list li:hover { background: #FFD70012; color: #FFD700; }
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+input, textarea {
+  padding: 12px;
+  border: 1.5px solid #25cff2;
+  border-radius: 7px;
+  font-size: 1em;
+  background: #030c1997;
+  color: #fffbe7;
+}
+button {
+  background: linear-gradient(98deg, #25cff2 10%, #044174 100%);
+  color: #fffbe7;
+  padding: 12px;
+  border: none;
+  border-radius: 7px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+button:hover {
+  background: #FFD700;
+  color: #14253d;
+}
+.message {
+  text-align: center;
+  color: #FFD700;
+  margin-top: 15px;
+  font-weight: bold;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(21,34,48,0.9);
+  border-top: 1.5px solid #044174b2;
+  color: #FFD700;
+  margin-top: 40px;
+}
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }

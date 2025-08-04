@@ -22,10 +22,10 @@
       <li><a href="#" onclick="showSection('contact')">Contact</a></li>
     </ul>
   </nav>
-
+  
   <section id="home" class="section visible">
     <div class="hero">
-      <img src="ai-minimalist-profile.jpg" alt="Tech minimalist vector, coffee shop" class="hero-img">
+      <img src="ai-minimalist-profile.jpg" alt="Tech minimalist vector" class="hero-img visible-img">
       <h1 class="gradient-name">
         <span class="name-glow">Siri Raju Darsinala</span>
       </h1>
@@ -44,13 +44,100 @@
           <a href="https://github.com/Siriraju-525" target="_blank"><i class="fa-brands fa-github"></i></a>
         </div>
       </div>
-      <div class="down-arrow">
+      <div class="down-arrow" id="downArrow">
         <i class="fa-solid fa-angle-double-down"></i>
       </div>
     </div>
   </section>
 
-  <!-- Other sections below (About, Skills, Projects, Blog, Contact) remain as in your existing code -->
+  <section id="about" class="section">
+    <div class="about-layout">
+      <img src="ai-minimalist-profile.jpg" class="about-img visible-img" alt="About Image">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          <span class="about-highlight">Hi, I’m Siri Raju Darsinala, B.Tech CSE (2025).</span>  
+          I am passionate about fusing AI with elegant tech and data solutions.<br>
+          <strong>Experience:</strong> Completed AI/ML internship at Microsoft (multi-animal recognition project), and a simulation at JP Morgan working with advanced trading platforms.<br>
+          I love building <span class="about-highlight">solutions that bridge business needs and modern technology!</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <h2>⚡ My Tech Stack</h2>
+    <ul class="skills-list">
+      <li><i class="fa-brands fa-python"></i> Python</li>
+      <li><i class="fa-solid fa-database"></i> SQL</li>
+      <li><i class="fa-brands fa-js"></i> JavaScript</li>
+      <li><i class="fa-brands fa-html5"></i> HTML</li>
+      <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
+      <li><i class="fa-solid fa-robot"></i> TensorFlow</li>
+      <li><i class="fa-brands fa-git-alt"></i> Git</li>
+      <li><i class="fa-solid fa-chart-line"></i> Business Analysis</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Binance Trading Bot</h3>
+        <p><i class="fa-brands fa-python"></i> Python, Binance API</p>
+        <p>Automated crypto trading bot with real-time data and smart trade logic.</p>
+        <a href="https://github.com/Siriraju-525/binance-futures-trading-bot" target="_blank">View Project</a>
+      </div>
+      <div class="card">
+        <h3>Digit Recognition</h3>
+        <p><i class="fa-solid fa-robot"></i> TensorFlow, Keras</p>
+        <p>Built an AI to recognize handwritten digits using CNN model.</p>
+        <a href="https://github.com/Siriraju-525/Handwritten-digit-recognition" target="_blank">View Project</a>
+      </div>
+      <div class="card">
+        <h3>Portfolio Website</h3>
+        <p><i class="fa-solid fa-globe"></i> HTML, CSS, JS</p>
+        <p>Animated portfolio with elegant sections and effects.</p>
+        <a href="https://github.com/Siriraju-525/portfolio-website" target="_blank">View Project</a>
+      </div>
+    </div>
+    <img src="download.jpg" class="project-img visible-img" alt="Project Network BG">
+  </section>
+
+  <section id="blog" class="section">
+    <h2>Blog</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>AI in Software</h3>
+        <p>How AI shapes the future of development and tech innovation.</p>
+      </div>
+      <div class="card">
+        <h3>Top Data Projects</h3>
+        <p>Best beginner projects for aspiring data analysts.</p>
+      </div>
+      <div class="card">
+        <h3>Trading Bot Build</h3>
+        <p>Behind the scenes of my Binance Trading Bot creation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <form onsubmit="showMessage(event)">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div id="message" class="message"></div>
+    <p>Connect:</p>
+    <div class="icons">
+      <a href="mailto:siriraju.darsinala001@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/siri-raju-darsinala" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://github.com/Siriraju-525" target="_blank"><i class="fa-brands fa-github"></i></a>
+    </div>
+  </section>
 
   <footer>
     <p>Thank you for visiting. Let's collaborate and build something amazing.</p>
@@ -58,30 +145,39 @@
   </footer>
 
   <script>
+    // Section navigation/show logic
     function showSection(id) {
       document.querySelectorAll('.section').forEach(sec => sec.classList.remove('visible'));
       document.getElementById(id).classList.add('visible');
+      window.scrollTo({top: 0, behavior: 'smooth'});
     }
 
+    // Down arrow scrolls to About
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('downArrow').onclick = function() {
+        showSection('about');
+      };
+    });
+
+    // Form message
     function showMessage(e) {
       e.preventDefault();
       const msg = document.getElementById('message');
       msg.innerText = 'Message sent! If any error, please check internet or try again.';
     }
 
-    // Moving glowing network background (animated drift)
+    // --- Background Animation ---
+    // Network image movement
     const netCanvas = document.getElementById('networkCanvas');
     const netCtx = netCanvas.getContext('2d');
     let networkImg = new Image();
-    networkImg.src = 'download.jpg'; // place your blue neural network image as "download.jpg"
-
+    networkImg.src = 'download.jpg';
     function resizeNetwork() {
       netCanvas.width = window.innerWidth;
       netCanvas.height = window.innerHeight;
     }
     window.addEventListener('resize', resizeNetwork);
     resizeNetwork();
-
     let offset = 0;
     function animateNetworkBg() {
       offset += 0.04;
@@ -96,7 +192,7 @@
     }
     networkImg.onload = animateNetworkBg;
 
-    // Animated gold sparkling lines (canvas overlay)
+    // Animated sparkling lines
     const sparkleCanvas = document.getElementById('sparkleCanvas');
     const sparkleCtx = sparkleCanvas.getContext('2d');
     function resizeSparkle() {
@@ -105,7 +201,6 @@
     }
     window.addEventListener('resize', resizeSparkle);
     resizeSparkle();
-
     const sparkleLines = Array.from({length: 18}, (_,i)=>({
       x: Math.random()*window.innerWidth,
       y: Math.random()*window.innerHeight,
@@ -116,20 +211,16 @@
       speed: 0.001+Math.random()*0.002,
       alpha: 0.10+Math.random()*0.22
     }));
-
     function animateSparkleLines() {
       sparkleCtx.clearRect(0, 0, sparkleCanvas.width, sparkleCanvas.height);
       sparkleLines.forEach(line => {
         line.x += Math.cos(line.angle)*0.26 + line.dx;
         line.y += Math.sin(line.angle)*0.26 + line.dy;
         line.angle += (Math.random()-0.5)*0.005;
-
         if(line.x < 0 || line.x > sparkleCanvas.width) line.x = Math.random()*sparkleCanvas.width;
         if(line.y < 0 || line.y > sparkleCanvas.height) line.y = Math.random()*sparkleCanvas.height;
-
         const x2 = line.x + Math.cos(line.angle)*line.length;
         const y2 = line.y + Math.sin(line.angle)*line.length;
-
         sparkleCtx.save();
         sparkleCtx.beginPath();
         sparkleCtx.moveTo(line.x, line.y);
