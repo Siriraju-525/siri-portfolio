@@ -35,13 +35,13 @@ body {
   background: linear-gradient(to right, #fefefe, #f6e6d9);
 }
 .hero-img {
-  width: 150px;
-  border-radius: 50%;
+  width: 200px;
+  border-radius: 12px;
 }
 .hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5em;
-  margin: 20px 0 10px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 3em;
+  color: #c89e32;
 }
 .hero p {
   font-size: 1.2em;
@@ -73,6 +73,12 @@ h2 {
 .card:hover {
   transform: translateY(-5px);
   border-color: #d4af37;
+}
+.about-img, .project-img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  margin: 20px 0;
 }
 form {
   display: flex;
