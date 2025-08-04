@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Times New Roman', Times, serif; /* Main font changed */
+  font-family: 'Times New Roman', Times, serif; /* Main font set to Times New Roman */
   background: #0A192F;
   color: #ccd6f6;
   overflow-x: hidden;
@@ -98,15 +98,10 @@ body {
 }
 
 .gradient-name.name-times {
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 4.5em;
-  font-weight: bold;
-  font-style: italic; /* Added for a more classic feel */
-  background: linear-gradient(90deg, #FFD700 20%, #50C878 70%, #fff 95%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
+  font-family: 'Great Vibes', cursive;
+  font-size: 4em; /* Medium font size */
+  font-weight: 500;
+  color: #FFD700; /* Solid gold color */
   margin: 15px 0;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
@@ -165,7 +160,7 @@ h2 {
   font-weight: bold;
   font-size: 3em;
   font-style: italic;
-  color: #FFD700; /* Gold Color */
+  color: #FFD700;
   margin-bottom: 40px;
   text-align: center;
   position: relative;
