@@ -6,12 +6,12 @@
   <title>Siri Raju Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
   <canvas id="networkCanvas"></canvas>
   <canvas id="sparkleCanvas"></canvas>
-
+  
   <nav class="navbar">
     <ul>
       <li><a href="#" onclick="showSection('home')">Home</a></li>
@@ -22,86 +22,103 @@
       <li><a href="#" onclick="showSection('contact')">Contact</a></li>
     </ul>
   </nav>
-
+  
   <section id="home" class="section visible">
     <div class="hero">
-      <img src="https://assets6.lottiefiles.com/packages/lf20_x62chJ.json" alt="Animated Tech Girl" class="hero-img">
-      <h1 class="gradient-name name-orbitron">Siri Raju Darsinala</h1>
-      <p class="title">AI/ML Engineer | Freelancer | Business Developer</p>
-      <p class="tagline">Helping businesses grow with smart, elegant, and scalable solutions.</p>
-      <div class="icons">
-        <a href="mailto:siriraju.darsinala001@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-        <a href="https://www.linkedin.com/in/siri-raju-darsinala" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="https://github.com/Siriraju-525" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <img src="ai-minimalist-profile.jpg" alt="Tech minimalistic vector" class="hero-img visible-img">
+      <h1 class="gradient-name">
+        <span class="name-glow">Siri Raju Darsinala</span>
+      </h1>
+      <div class="animated-badge">
+        <i class="fa-solid fa-microchip"></i>
+        AI/ML Engineer &bull; Data Enthusiast
+        <i class="fa-solid fa-brain"></i>
       </div>
-      <div class="down-arrow global-arrow"><i class="fa-solid fa-angles-down"></i></div>
+      <div class="glass-card">
+        <p class="tagline">
+          Transforming ideas into <strong>intelligent</strong>, <strong>elegant</strong>, and <strong>impactful</strong> solutions.
+        </p>
+        <div class="icons">
+          <a href="mailto:siriraju.darsinala001@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/siri-raju-darsinala" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/Siriraju-525" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+      <div class="down-arrow" id="downArrow">
+        <i class="fa-solid fa-angle-double-down"></i>
+      </div>
     </div>
   </section>
 
   <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>I’m Siri Raju Darsinala, a passionate tech enthusiast and recent B.Tech CSE graduate (2025) with a deep interest in AI, automation, and data-driven innovation. My mission is to build elegant, efficient, and scalable solutions that empower businesses and create real-world impact.</p>
-    <p><strong>Professional Summary:</strong> I bring a unique combination of technical expertise and business acumen. During my AI/ML internship at Microsoft, I developed a multi-animal recognition system. At JP Morgan's job simulation, I gained valuable experience in trading platforms and business analytics. I’m actively contributing to open-source projects and freelancing to solve real-world challenges.</p>
-    <p><strong>Achievements:</strong> Successfully deployed AI models for practical use cases, designed user-centric interfaces, and built automation tools that streamline tasks and enhance productivity.</p>
-    <p><strong>Mission:</strong> To leverage technology for positive change, collaborate with innovative teams, and continually learn and grow in the fields of AI, ML, and business development.</p>
-  </section>
-
-  <section id="skills" class="section">
-    <h2>My Tech Stack</h2>
-    <div class="skills-categories">
-      <h3>Languages</h3>
-      <ul class="skills-list">
-        <li><i class="fa-brands fa-python"></i> Python - Expert</li>
-        <li><i class="fa-solid fa-database"></i> SQL - Intermediate</li>
-        <li><i class="fa-brands fa-js"></i> JavaScript - Intermediate</li>
-        <li><i class="fa-brands fa-html5"></i> HTML - Advanced</li>
-        <li><i class="fa-brands fa-css3-alt"></i> CSS - Advanced</li>
-      </ul>
-      <h3>Frameworks & Tools</h3>
-      <ul class="skills-list">
-        <li><i class="fa-solid fa-robot"></i> TensorFlow - Intermediate</li>
-        <li><i class="fa-brands fa-git-alt"></i> Git - Advanced</li>
-        <li><i class="fa-solid fa-chart-line"></i> Business Analysis - Advanced</li>
-      </ul>
+    <div class="about-layout">
+      <img src="ai-minimalist-profile.jpg" class="about-img visible-img" alt="About Image">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          <span class="about-highlight">Hi, I’m Siri Raju Darsinala, B.Tech CSE (2025).</span>  
+          I am passionate about fusing AI with elegant tech and data solutions.<br>
+          <strong>Experience:</strong> Completed AI/ML internship at Microsoft (multi-animal recognition project), and a simulation at JP Morgan working with advanced trading platforms.<br>
+          I love building <span class="about-highlight">solutions that bridge business needs and modern technology!</span>
+        </p>
+      </div>
     </div>
   </section>
 
+  <section id="skills" class="section">
+    <h2>⚡ My Tech Stack</h2>
+    <ul class="skills-list">
+      <li><i class="fa-brands fa-python"></i> Python</li>
+      <li><i class="fa-solid fa-database"></i> SQL</li>
+      <li><i class="fa-brands fa-js"></i> JavaScript</li>
+      <li><i class="fa-brands fa-html5"></i> HTML</li>
+      <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
+      <li><i class="fa-solid fa-robot"></i> TensorFlow</li>
+      <li><i class="fa-brands fa-git-alt"></i> Git</li>
+      <li><i class="fa-solid fa-chart-line"></i> Business Analysis</li>
+    </ul>
+  </section>
+
   <section id="projects" class="section">
-    <h2>Featured Projects</h2>
+    <h2>Projects</h2>
     <div class="grid">
       <div class="card">
         <h3>Binance Trading Bot</h3>
-        <p>Real-time crypto automation, analytics, and risk control.</p>
+        <p><i class="fa-brands fa-python"></i> Python, Binance API</p>
+        <p>Automated crypto trading bot with real-time data and smart trade logic.</p>
         <a href="https://github.com/Siriraju-525/binance-futures-trading-bot" target="_blank">View Project</a>
       </div>
       <div class="card">
         <h3>Digit Recognition</h3>
-        <p>Handwritten digit recognition using CNN and TensorFlow.</p>
+        <p><i class="fa-solid fa-robot"></i> TensorFlow, Keras</p>
+        <p>Built an AI to recognize handwritten digits using CNN model.</p>
         <a href="https://github.com/Siriraju-525/Handwritten-digit-recognition" target="_blank">View Project</a>
       </div>
       <div class="card">
         <h3>Portfolio Website</h3>
-        <p>Animated, sectioned portfolio for freelancing & jobs.</p>
+        <p><i class="fa-solid fa-globe"></i> HTML, CSS, JS</p>
+        <p>Animated portfolio with elegant sections and effects.</p>
         <a href="https://github.com/Siriraju-525/portfolio-website" target="_blank">View Project</a>
       </div>
     </div>
+    <img src="download.jpg" class="project-img visible-img" alt="Project Network BG">
   </section>
 
   <section id="blog" class="section">
     <h2>Blog</h2>
     <div class="grid">
-      <a class="card" href="blog1.html" target="_blank">
+      <div class="card">
         <h3>AI in Software</h3>
-        <p>How AI is shaping the future of development and innovation.</p>
-      </a>
-      <a class="card" href="blog2.html" target="_blank">
+        <p>How AI shapes the future of development and tech innovation.</p>
+      </div>
+      <div class="card">
         <h3>Top Data Projects</h3>
-        <p>Best beginner projects to kickstart your data journey.</p>
-      </a>
-      <a class="card" href="blog3.html" target="_blank">
+        <p>Best beginner projects for aspiring data analysts.</p>
+      </div>
+      <div class="card">
         <h3>Trading Bot Build</h3>
-        <p>My journey building a smart, real-time crypto trading bot.</p>
-      </a>
+        <p>Behind the scenes of my Binance Trading Bot creation.</p>
+      </div>
     </div>
   </section>
 
@@ -114,31 +131,115 @@
       <button type="submit">Send Message</button>
     </form>
     <div id="message" class="message"></div>
+    <p>Connect:</p>
     <div class="icons">
       <a href="mailto:siriraju.darsinala001@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-      <a href="tel:+917093272896"><i class="fa-solid fa-phone"></i></a>
       <a href="https://www.linkedin.com/in/siri-raju-darsinala" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
       <a href="https://github.com/Siriraju-525" target="_blank"><i class="fa-brands fa-github"></i></a>
     </div>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3047.2062115533316!2d78.805!3d16.999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDU5JzU2LjAiTiA3OMKwNDgnMTguMCJF!5e0!3m2!1sen!2sin!4v1632290401917!5m2!1sen!2sin" width="100%" height="250" style="border:0; margin-top:20px;" allowfullscreen="" loading="lazy"></iframe>
   </section>
 
   <footer>
-    <p>Thank you for visiting. <b>Open to freelance and job opportunities!</b> Let's collaborate.</p>
+    <p>Thank you for visiting. Let's collaborate and build something amazing.</p>
     <p>&copy; 2025 Siri Raju Darsinala</p>
   </footer>
 
   <script>
+    // Section navigation
     function showSection(id) {
       document.querySelectorAll('.section').forEach(sec => sec.classList.remove('visible'));
       document.getElementById(id).classList.add('visible');
       window.scrollTo({top: 0, behavior: 'smooth'});
     }
+
+    // Arrow scrolls to About
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('downArrow').onclick = function() {
+        showSection('about');
+      };
+    });
+
+    // Form message
     function showMessage(e) {
       e.preventDefault();
       const msg = document.getElementById('message');
       msg.innerText = 'Message sent! If any error, please check internet or try again.';
     }
+
+    // Background Animation JS (same as previous version; see previous messages for reference)
+    // Moving glowing network background
+    const netCanvas = document.getElementById('networkCanvas');
+    const netCtx = netCanvas.getContext('2d');
+    let networkImg = new Image();
+    networkImg.src = 'download.jpg';
+    function resizeNetwork() {
+      netCanvas.width = window.innerWidth;
+      netCanvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeNetwork);
+    resizeNetwork();
+    let offset = 0;
+    function animateNetworkBg() {
+      offset += 0.04;
+      netCtx.clearRect(0, 0, netCanvas.width, netCanvas.height);
+      let sw = Math.max(netCanvas.width, 1080), sh = Math.max(netCanvas.height, 608);
+      let dx = Math.sin(offset/2) * 24;
+      let dy = Math.cos(offset/3) * 24;
+      netCtx.globalAlpha = 0.77;
+      netCtx.drawImage(networkImg, dx, dy, sw, sh, 0, 0, netCanvas.width, netCanvas.height);
+      netCtx.globalAlpha = 1.0;
+      requestAnimationFrame(animateNetworkBg);
+    }
+    networkImg.onload = animateNetworkBg;
+
+    // Animated gold sparkling lines
+    const sparkleCanvas = document.getElementById('sparkleCanvas');
+    const sparkleCtx = sparkleCanvas.getContext('2d');
+    function resizeSparkle() {
+      sparkleCanvas.width = window.innerWidth;
+      sparkleCanvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeSparkle);
+    resizeSparkle();
+    const sparkleLines = Array.from({length: 18}, (_,i)=>({
+      x: Math.random()*window.innerWidth,
+      y: Math.random()*window.innerHeight,
+      dx: (Math.random()-0.5)*0.3,
+      dy: (Math.random()-0.5)*0.3,
+      angle: Math.random()*Math.PI*2,
+      length: 80+Math.random()*90,
+      speed: 0.001+Math.random()*0.002,
+      alpha: 0.10+Math.random()*0.22
+    }));
+    function animateSparkleLines() {
+      sparkleCtx.clearRect(0, 0, sparkleCanvas.width, sparkleCanvas.height);
+      sparkleLines.forEach(line => {
+        line.x += Math.cos(line.angle)*0.26 + line.dx;
+        line.y += Math.sin(line.angle)*0.26 + line.dy;
+        line.angle += (Math.random()-0.5)*0.005;
+        if(line.x < 0 || line.x > sparkleCanvas.width) line.x = Math.random()*sparkleCanvas.width;
+        if(line.y < 0 || line.y > sparkleCanvas.height) line.y = Math.random()*sparkleCanvas.height;
+        const x2 = line.x + Math.cos(line.angle)*line.length;
+        const y2 = line.y + Math.sin(line.angle)*line.length;
+        sparkleCtx.save();
+        sparkleCtx.beginPath();
+        sparkleCtx.moveTo(line.x, line.y);
+        sparkleCtx.lineTo(x2, y2);
+        const grad = sparkleCtx.createLinearGradient(line.x, line.y, x2, y2);
+        grad.addColorStop(0, "#fff2cc");
+        grad.addColorStop(0.45, "#FFD700");
+        grad.addColorStop(1, "#fffbe7");
+        sparkleCtx.strokeStyle = grad;
+        sparkleCtx.globalAlpha = line.alpha;
+        sparkleCtx.lineWidth = 2.2 + Math.random();
+        sparkleCtx.shadowBlur = 10;
+        sparkleCtx.shadowColor = "#FFD700";
+        sparkleCtx.stroke();
+        sparkleCtx.restore();
+      });
+      requestAnimationFrame(animateSparkleLines);
+    }
+    animateSparkleLines();
   </script>
 </body>
 </html>
