@@ -169,16 +169,18 @@ h2 {
   text-align: center;
   position: relative;
   letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 h2::after {
   content: '';
   display: block;
-  width: 100px;
+  width: 120px;
   height: 2px;
   background: #FFD700; /* Gold underline */
   margin: 15px auto 0;
   opacity: 0.7;
+  border-radius: 2px;
 }
 
 .about-layout {
