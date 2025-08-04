@@ -5,70 +5,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Siri Raju Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <h1>Siri Raju Darsinala</h1>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-  <section id="hero">
-    <h2>Data Analyst | Business Analyst | AI/ML Engineer | Software Developer</h2>
-    <p>Passionate about building intelligent, data-driven, and human-focused solutions.</p>
-  </section>
+  <header id="home">
+    <div class="hero">
+      <img src="https://i.ibb.co/0MZ2J3r/animated-girl.png" alt="Animated Girl" class="hero-img">
+      <h1>Siri Raju Darsinala</h1>
+      <p>AI/ML Engineer | Data Analyst | Web Developer | Business Developer</p>
+    </div>
+  </header>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>I am a 2025 B.Tech Computer Science graduate, eager to create software and AI/ML solutions that solve real-world problems.</p>
+    <p>Hello! I’m Siri Raju Darsinala, a dynamic and motivated Computer Science graduate (B.Tech, CSE – Class of 2025) with a passion for solving problems using technology and creativity. I specialize in AI/ML, data analytics, and software development, with a strong interest in business development and client-driven innovation.</p>
+    <p><strong>Skills:</strong> Python, SQL, HTML, CSS, JavaScript, TensorFlow, Keras, Django, Git, MySQL, Business Analysis, Client Relations.</p>
+    <p><strong>Internship Experience:</strong> I worked on cutting-edge AI projects including multi-animal class recognition and developed a Binance Futures Trading Bot using Python. My experience also includes building user-centric web applications and collaborating with cross-functional teams to deliver impactful solutions.</p>
+    <p>With a strong foundation in tech and a growing passion for business development, I aim to bridge the gap between technical solutions and business goals, delivering value to both employers and freelance clients.</p>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
-    <div class="card">
-      <h3>Binance Futures Trading Bot</h3>
-      <p>Python, Binance API, pandas</p>
-      <p>Automated crypto trading bot with TWAP/Grid strategies.</p>
-      <a href="https://github.com/Siriraju-525/binance-futures-trading-bot" target="_blank">GitHub Link</a>
-    </div>
-    <div class="card">
-      <h3>Handwritten Digit Recognition</h3>
-      <p>Python, TensorFlow, Keras</p>
-      <p>CNN model for digit recognition using MNIST dataset.</p>
-      <a href="https://github.com/Siriraju-525/Handwritten-digit-recognition" target="_blank">GitHub Link</a>
+    <div class="grid">
+      <div class="card">
+        <h3>Binance Trading Bot</h3>
+        <p>Python, Binance API, pandas</p>
+        <a href="https://github.com/Siriraju-525/binance-futures-trading-bot" target="_blank">View Project</a>
+      </div>
+      <div class="card">
+        <h3>Digit Recognition</h3>
+        <p>TensorFlow, Keras, CNN</p>
+        <a href="https://github.com/Siriraju-525/Handwritten-digit-recognition" target="_blank">View Project</a>
+      </div>
     </div>
   </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul class="skills-list">
-      <li>Python</li>
-      <li>SQL</li>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>TensorFlow</li>
-      <li>Keras</li>
-      <li>Git</li>
-      <li>MySQL</li>
-      <li>Django</li>
-    </ul>
+  <section id="blog">
+    <h2>Blog</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Why AI/ML is the Future of Software Development</h3>
+        <p>AI is transforming software development with intelligent automation, real-time analytics, and smarter user experiences. Learn how AI is shaping the future of tech careers.</p>
+      </div>
+      <div class="card">
+        <h3>Top 5 Projects for Data Analyst Beginners</h3>
+        <p>Explore beginner-friendly data analysis projects using Python, SQL, and visualization tools to kickstart your career in data analytics.</p>
+      </div>
+      <div class="card">
+        <h3>How I Built My First Trading Bot in Python</h3>
+        <p>A practical guide on how I created a Binance Futures Trading Bot using Python and Binance API, and what I learned from real-time trading automation.</p>
+      </div>
+    </div>
   </section>
 
   <section id="contact">
     <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:siriraju.darsinala001@gmail.com">siriraju.darsinala001@gmail.com</a></p>
-    <p><a href="https://github.com/Siriraju-525" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/siri-raju-darsinala" target="_blank">LinkedIn</a></p>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
   <footer>
-    <p>&copy; 2025 Siri Raju Darsinala | Portfolio Website</p>
+    <p>Thank you for visiting my portfolio. Let’s collaborate and create something exceptional together!</p>
+    <p>&copy; 2025 Siri Raju Darsinala</p>
   </footer>
 </body>
 </html>
